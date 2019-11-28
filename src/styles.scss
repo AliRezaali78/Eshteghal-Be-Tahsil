@@ -2,3 +2,18 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button[routerLink],
+a[mat-button],
+a[routerLink],
+button[mat-button],
+button[mat-raised-button],
+button[mat-icon-button],
+button[mat-flat-button],
+button[mat-mini-fab],
+button[mat-fab],
+button[mat-stroked-button]{
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
