@@ -1,0 +1,8 @@
+mat-form-field{
+    width: 100% !important;
+}
+@media screen AND (max-width: 425px){
+    #contact{
+        display: block !important;
+    }
+}

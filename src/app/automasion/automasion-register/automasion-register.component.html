@@ -1,0 +1,30 @@
+<form #f="ngForm" style="padding:16px;">
+  <div class="py-3">
+    <div id="contact" class="d-flex">
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput name="firstname" placeholder="نام">
+          <mat-error>فیلد نام الزامی می باشد</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput name="lastname" placeholder="نام خانوادگی">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput ngModel name="studentId" placeholder="شماره دانشجویی">
+        <mat-error>لطفا شماره دانشجویی را صحیح وارد کنید</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput ngModel name="creditId" placeholder="کد ملی">
+        <mat-error>لطفا کد ملی را صحیح وارد کنید</mat-error>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" [disabled]="!f.valid">ثبت نام</button>
+  </div>
+</form>

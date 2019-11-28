@@ -1,0 +1,30 @@
+
+.text-shadow{
+    text-shadow: 0 0 0.5rem rgba(1,1,1,0.5);
+}
+.title{
+    padding-bottom: 1rem ;
+    font-size: 30px !important;
+}
+
+.max-stretch{
+    max-width: 425px;
+}
+
+/* Medias */
+@media screen AND (max-width: 425px){
+    mat-card{
+        width: 90% !important;
+    }
+}
+@media screen AND (max-width: 375px){
+    mat-card{
+        width: 90% !important;
+    }
+}
+@media screen AND (max-width: 320px){
+    mat-card{
+        width: 90% !important;
+    }
+}
+
