@@ -1,0 +1,107 @@
+@import "~@angular/material/_theming";
+
+@include mat-core();
+
+$app-primary: mat-palette($mat-blue,700);
+$app-accent: mat-palette($mat-yellow,600);
+$app-warn: mat-palette($mat-red);
+$app-theme: mat-light-theme($app-primary,$app-accent,$app-warn);
+.mat-light-theme{
+    @include angular-material-theme($app-theme);
+}
+$primary-color: mat-color($app-primary);
+$primary-text-color: #ffffff;
+
+$accent-color: mat-color($app-accent);
+$warn-color: mat-color($app-warn);
+
+.mat-light-theme .mat-bg-primary-dark{
+    background-color: darken($primary-color,10) !important;
+}
+.mat-light-theme .mat-bg-accent-dark{
+    background-color: darken($accent-color,10) !important;
+}
+.mat-light-theme .mat-bg-warn-dark{
+    background-color: darken($warn-color,10) !important;
+}
+
+.mat-light-theme .mat-bg-primary{
+    background-color : $primary-color !important;
+    color: $primary-text-color !important;
+}
+.mat-light-theme .mat-bg-accent{
+    background-color : $accent-color !important;
+}
+.mat-light-theme .mat-bg-warn{
+    background-color : $warn-color !important;
+}
+
+.mat-light-theme .mat-text-primary{
+    color :  $primary-color !important;
+}
+.mat-light-theme .mat-text-accent{
+    color : $accent-color !important;
+}
+.mat-light-theme .mat-text-warn{
+    color : $warn-color !important;
+}
+
+// Dark Theme
+$app-dark-primary: mat-palette($mat-purple,500);
+$app-dark-accent: mat-palette($mat-green,A100);
+$app-dark-warn: mat-palette($mat-red);
+$app-dark-theme: mat-dark-theme($app-dark-primary,$app-dark-accent,$app-dark-warn);
+.mat-dark-theme{
+    @include angular-material-theme($app-dark-theme);
+}
+
+$primary-dark-color: mat-color($app-dark-primary);
+$primary-dark-text-color: #ffffff;
+
+$accent-dark-color: mat-color($app-dark-accent);
+$warn-dark-color: mat-color($app-dark-warn);
+
+.mat-dark-theme .mat-bg-primary-dark{
+    background-color: darken($primary-dark-color,10) !important;
+}
+.mat-dark-theme .mat-bg-accent-dark{
+    background-color: darken($accent-dark-color,10) !important;
+}
+.mat-dark-theme .mat-bg-warn-dark{
+    background-color: darken($warn-dark-color,10) !important;
+}
+
+.mat-dark-theme .mat-bg-primary{
+    background-color : $primary-dark-color !important;
+    color: $primary-dark-text-color !important;
+}
+.mat-dark-theme .mat-bg-accent{
+    background-color : $accent-dark-color !important;
+}
+.mat-dark-theme .mat-bg-warn{
+    background-color : $warn-dark-color !important;
+}
+
+.mat-dark-theme .mat-text-primary{
+    color :  $primary-dark-color !important;
+}
+.mat-dark-theme .mat-text-accent{
+    color : $accent-dark-color !important;
+}
+.mat-dark-theme .mat-text-warn{
+    color : $warn-dark-color !important;
+}
+.mat-dark-theme .list-group-item{
+    background-color: #444444;
+}
+.mat-dark-theme .background{
+    background-color: #444444;
+    color: white;
+
+}
+
+// Custom typography
+$app-typography: mat-typography-config(
+    $font-family: 'iransans, MyriadPro-Regular, Myriad Pro Regular, MyriadPro, Myriad Pro, open-sans, tahoma, sans-serif'
+);
+@include angular-material-typography($app-typography);
