@@ -6,11 +6,17 @@ import { CustomFormsModule } from 'ng2-validation';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AutomasionLoginComponent } from './automasion/automasion-login/automasion-login.component';
+import { AutomasionRegisterComponent } from './automasion/automasion-register/automasion-register.component';
+import { AutomasionComponent } from './automasion/automasion.component';
 import { MaterialsModule } from './materials-module/materials.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AutomasionComponent,
+    AutomasionLoginComponent,
+    AutomasionRegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +26,6 @@ import { MaterialsModule } from './materials-module/materials.module';
     FormsModule,
     ReactiveFormsModule,
     CustomFormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
