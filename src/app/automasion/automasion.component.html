@@ -3,10 +3,18 @@
   <mat-card>
     <mat-card-content>
       <mat-tab-group dynamicHeight mat-stretch-tabs>
-        <mat-tab label="ورود به سیستم">
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <i class="fa fa-sign-in ml-2"></i>
+            <span>ورود به سیستم</span>
+          </ng-template>
           <automasion-login></automasion-login>
         </mat-tab>
-        <mat-tab label="ثبت نام">
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <i class="fa fa-user-plus ml-2"></i>
+            <span>ثبت نام</span>
+          </ng-template>
           <automasion-register></automasion-register>
         </mat-tab>
       </mat-tab-group>
