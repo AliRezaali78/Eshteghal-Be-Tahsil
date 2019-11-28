@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./automasion.component.css']
 })
 export class AutomasionComponent implements OnInit {
-
+  title = "اتوماسیون"
   constructor(private titleService: Title) { }
 
   ngOnInit() {
