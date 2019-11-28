@@ -3,12 +3,14 @@
     <div class="form-group">
       <mat-form-field>
         <input matInput required ngModel name="username" placeholder="نام کاربری" [disabled]="loading">
+        <mat-icon matSuffix>person</mat-icon>
         <mat-error>فیلد نام کاربری الزامی می باشد</mat-error>
       </mat-form-field>
     </div>
     <div class="form-group">
       <mat-form-field>
         <input matInput required ngModel name="password" placeholder="کلمه عبور" [disabled]="loading">
+        <mat-icon matSuffix>lock</mat-icon>
         <mat-error>فیلد کلمه عبور الزامی می باشد</mat-error>
       </mat-form-field>
     </div>
