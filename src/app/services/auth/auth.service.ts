@@ -20,4 +20,8 @@ export class AuthService {
     else
       return throwError(new BadRequest()).pipe(delay(2000));
   }
+
+  logout() {
+    localStorage.removeItem('token');
+  }
 }
