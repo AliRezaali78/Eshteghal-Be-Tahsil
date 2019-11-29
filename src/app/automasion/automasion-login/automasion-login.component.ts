@@ -11,12 +11,17 @@ import { BadRequest } from 'src/app/common/errors/bad-request.error';
   styleUrls: ['./automasion-login.component.css']
 })
 export class AutomasionLoginComponent implements OnInit {
-
+  hide = true;
   loading = false;
-  invalidLogin: boolean;
+  invalidLogin: boolean = false;
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  switchPassword(event) {
+    event.stopPropagation();
+    this.hide = !this.hide;
   }
 
   signIn(form: FormGroup) {

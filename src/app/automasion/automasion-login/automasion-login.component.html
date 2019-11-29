@@ -11,8 +11,11 @@
     </div>
     <div class="form-group">
       <mat-form-field>
-        <input matInput required ngModel name="password" placeholder="کلمه عبور" [disabled]="loading">
-        <mat-icon matSuffix>lock</mat-icon>
+        <input matInput required ngModel [type]="hide ? 'password' : 'text'" name="password" placeholder="کلمه عبور"
+          [disabled]="loading">
+        <button type="button" mat-icon-button matSuffix (click)="switchPassword($event)">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
         <mat-error>فیلد کلمه عبور الزامی می باشد</mat-error>
       </mat-form-field>
     </div>
