@@ -9,7 +9,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, http: HttpClient) {
+    http.post('https://jsonplaceholder.typicode.com/todos/1', { test: 'test' }).subscribe(
+      res => console.log(res)
+    )
   }
 
   ngOnInit() {

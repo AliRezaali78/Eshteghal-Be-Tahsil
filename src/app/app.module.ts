@@ -13,8 +13,9 @@ import { AppErrorHandler } from './common/errors/app-error-handler';
 import { MainComponent } from './main/main/main.component';
 import { MaterialsModule } from './materials-module/materials.module';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
+import { AuthInterceptor } from './services/auth.interceptor.service';
 
 @NgModule({
   declarations: [
@@ -38,10 +39,11 @@ import { JwtModule } from '@auth0/angular-jwt';
       config: {
         tokenGetter: tokenGetter
       }
-    })
+    }),
   ],
   providers: [
-    { provide: ErrorHandler, useClass: AppErrorHandler }
+    { provide: ErrorHandler, useClass: AppErrorHandler },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
