@@ -5,7 +5,7 @@ import { MainComponent } from './main/main/main.component';
 
 const routes: Routes = [
   { path: "", component: AutomasionComponent },
-  { path: "/main", component: MainComponent },
+  { path: "main", component: MainComponent },
 ];
 
 @NgModule({
