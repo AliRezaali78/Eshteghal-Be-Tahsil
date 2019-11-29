@@ -15,6 +15,7 @@ import { MaterialsModule } from './materials-module/materials.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
+import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptor } from './services/auth.interceptor.service';
 
 @NgModule({
@@ -40,6 +41,7 @@ import { AuthInterceptor } from './services/auth.interceptor.service';
         tokenGetter: tokenGetter
       }
     }),
+    ToastrModule.forRoot()
   ],
   providers: [
     { provide: ErrorHandler, useClass: AppErrorHandler },
