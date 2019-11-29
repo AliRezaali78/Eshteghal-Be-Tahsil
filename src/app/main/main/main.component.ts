@@ -9,14 +9,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private authService: AuthService) {
+  constructor() {
   }
 
   ngOnInit() {
   }
 
-  get currentUser() {
-    return this.authService.currentUser;
-  }
+
 
 }
