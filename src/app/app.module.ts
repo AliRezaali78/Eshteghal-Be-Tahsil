@@ -17,6 +17,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptor } from './services/auth.interceptor.service';
+import { MainNavComponent } from './main/main-nav/main-nav.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AuthInterceptor } from './services/auth.interceptor.service';
     AutomasionLoginComponent,
     AutomasionRegisterComponent,
     MainComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,7 @@ import { AuthInterceptor } from './services/auth.interceptor.service';
         tokenGetter: tokenGetter
       }
     }),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
   ],
   providers: [
     { provide: ErrorHandler, useClass: AppErrorHandler },

@@ -23,6 +23,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { LayoutModule } from '@angular/cdk/layout';
+
 @NgModule({
     exports: [
         MatIconModule,
@@ -48,7 +50,9 @@ import { MatSortModule } from '@angular/material/sort';
         MatDialogModule,
         MatTableModule,
         MatPaginatorModule,
-        MatSortModule
+        MatSortModule,
+        LayoutModule
+
     ],
 })
 
