@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,6 +10,7 @@ import { AutomasionLoginComponent } from './automasion/automasion-login/automasi
 import { AutomasionRegisterComponent } from './automasion/automasion-register/automasion-register.component';
 import { AutomasionComponent } from './automasion/automasion.component';
 import { MaterialsModule } from './materials-module/materials.module';
+import { AppErrorHandler } from './common/errors/app-error-handler';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { MaterialsModule } from './materials-module/materials.module';
     ReactiveFormsModule,
     CustomFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: ErrorHandler, useClass: AppErrorHandler }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

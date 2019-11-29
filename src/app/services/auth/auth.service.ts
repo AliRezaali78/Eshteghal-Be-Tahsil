@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, map } from 'rxjs/operators';
+import { BadRequest } from 'src/app/common/errors/bad-request.error';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +18,6 @@ export class AuthService {
         } else return false;
       }));
     else
-      return throwError({ badInput: true }).pipe(delay(2000));
+      return throwError(new BadRequest()).pipe(delay(2000));
   }
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AppError } from 'src/app/common/errors/app.error';
+import { BadRequest } from 'src/app/common/errors/bad-request.error';
 
 @Component({
   selector: 'automasion-login',
@@ -24,9 +26,16 @@ export class AutomasionLoginComponent implements OnInit {
       if (result) {
         this.invalidLogin = false;
       } else this.invalidLogin = true;
-    }, error => {
+    }, (error: AppError) => {
       this.loading = false;
-      this.invalidLogin = true;
+      this.handleError(error);
     });
+  }
+
+  private handleError(error: AppError) {
+    if (error instanceof BadRequest)
+      this.invalidLogin = true;
+    else
+      throw error;
   }
 }
