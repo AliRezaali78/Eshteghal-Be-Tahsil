@@ -8,7 +8,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class AuthService {
   private fakeToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwibmFtZSI6Iti52YTbjCIsImxhc3RuYW1lIjoi2LHYttin2LnZhNuMIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE1MTYyMzkwMjJ9.aBEV8BYbhPxJQuWCvvn_jw-0zFvaJKjAM1h9f0pR-Kg";
-  constructor() { }
+  constructor(private jwt: JwtHelperService) { }
 
   login(credentials) {
     if (credentials.username.toLowerCase() === "admin" && credentials.password.toLowerCase() === "admin")
@@ -27,16 +27,10 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    let jwt = new JwtHelperService();
-    let token = localStorage.getItem('token');
-    if (!token) return false;
-    return !jwt.isTokenExpired(token);
+    return !this.jwt.isTokenExpired();
   }
 
   get currentUser() {
-    let jwt = new JwtHelperService();
-    let token = localStorage.getItem('token');
-    if (!token) return false;
-    return jwt.decodeToken(token);
+    return this.jwt.decodeToken();
   }
 }
