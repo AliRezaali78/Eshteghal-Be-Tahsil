@@ -1,4 +1,6 @@
-<form #f="ngForm" (ngSubmit)="login(f)" style="padding:16px;">
+<form #f="ngForm" (ngSubmit)="signIn(f)" style="padding:16px;">
+  <mat-error *ngIf="invalidLogin" class="mat-text-warn text-right">نام کاربری یا کلمه عبور اشتباه می باشد
+  </mat-error>
   <div class="py-3">
     <div class="form-group">
       <mat-form-field>

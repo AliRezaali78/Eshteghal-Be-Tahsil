@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth/auth.service';
+import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'automasion-login',
@@ -8,12 +11,22 @@ import { Component, OnInit } from '@angular/core';
 export class AutomasionLoginComponent implements OnInit {
 
   loading = false;
-  constructor() { }
+  invalidLogin: boolean;
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  login(form) {
+  signIn(form: FormGroup) {
     this.loading = true;
+    this.authService.login(form.value).subscribe(result => {
+      this.loading = false;
+      if (result) {
+        this.invalidLogin = false;
+      } else this.invalidLogin = true;
+    }, error => {
+      this.loading = false;
+      this.invalidLogin = true;
+    });
   }
 }
