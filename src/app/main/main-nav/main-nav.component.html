@@ -1,5 +1,6 @@
-<mat-toolbar class="nav" dir="rtl" color="accent">
-  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+<mat-toolbar class="nav" [class.half-shadow]="sidenavState" [class.full-shadow]="!sidenavState" dir="rtl"
+  color="accent">
+  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggleSideNav()">
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <span>اشتغال به تحصیل</span>
@@ -15,7 +16,7 @@
   </mat-menu>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav dir="rtl" position="end" #drawer class="sidenav custom-bg-dark-blue" fixedInViewport="true"
+  <mat-sidenav dir="rtl" position="end" #sidenav class="sidenav custom-bg-dark-blue" fixedInViewport="true"
     fixedTopGap="60" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <mat-nav-list>
