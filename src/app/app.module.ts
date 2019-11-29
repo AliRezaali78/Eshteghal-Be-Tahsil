@@ -11,13 +11,15 @@ import { AutomasionRegisterComponent } from './automasion/automasion-register/au
 import { AutomasionComponent } from './automasion/automasion.component';
 import { MaterialsModule } from './materials-module/materials.module';
 import { AppErrorHandler } from './common/errors/app-error-handler';
+import { MainComponent } from './main/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AutomasionComponent,
     AutomasionLoginComponent,
-    AutomasionRegisterComponent
+    AutomasionRegisterComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
