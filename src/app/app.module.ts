@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,10 +9,10 @@ import { AppComponent } from './app.component';
 import { AutomasionLoginComponent } from './automasion/automasion-login/automasion-login.component';
 import { AutomasionRegisterComponent } from './automasion/automasion-register/automasion-register.component';
 import { AutomasionComponent } from './automasion/automasion.component';
-import { MaterialsModule } from './materials-module/materials.module';
 import { AppErrorHandler } from './common/errors/app-error-handler';
 import { MainComponent } from './main/main/main.component';
-import { JwtModule } from '@auth0/angular-jwt';
+import { MaterialsModule } from './materials-module/materials.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { JwtModule } from '@auth0/angular-jwt';
     AutomasionComponent,
     AutomasionLoginComponent,
     AutomasionRegisterComponent,
-    MainComponent
+    MainComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
