@@ -8,9 +8,14 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) {
+  }
 
   ngOnInit() {
+  }
+
+  get currentUser() {
+    return this.authService.currentUser;
   }
 
 }
