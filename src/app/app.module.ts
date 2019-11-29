@@ -12,6 +12,7 @@ import { AutomasionComponent } from './automasion/automasion.component';
 import { MaterialsModule } from './materials-module/materials.module';
 import { AppErrorHandler } from './common/errors/app-error-handler';
 import { MainComponent } from './main/main/main.component';
+import { JwtModule } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { MainComponent } from './main/main/main.component';
     MaterialsModule,
     FormsModule,
     ReactiveFormsModule,
-    CustomFormsModule
+    CustomFormsModule,
   ],
   providers: [
     { provide: ErrorHandler, useClass: AppErrorHandler }
