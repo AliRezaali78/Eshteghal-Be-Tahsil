@@ -8,9 +8,7 @@ import { AppError } from 'src/app/common/errors/app.error';
 import { NotFound } from 'src/app/common/errors/not-found.error';
 import { BadRequest } from 'src/app/common/errors/bad-request.error';
 import { NotAuthorized } from '../common/errors/not-authorized.error';
-@Injectable({
-    providedIn: 'root'
-})
+
 export class DataService {
 
     constructor(private url: string, private http: HttpClient) {
