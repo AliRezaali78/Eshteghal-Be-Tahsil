@@ -20,11 +20,12 @@
     fixedTopGap="60" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <mat-nav-list>
-      <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="new-request">
+      <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="new-request"
+        routerLinkActive="active">
         درخواست جدید
       </a>
       <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="requests"
-        routerLink="/main/my/requests">
+        routerLinkActive="active">
         درخواست های جاری
       </a>
     </mat-nav-list>
