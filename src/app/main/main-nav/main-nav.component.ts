@@ -17,11 +17,7 @@ export class MainNavComponent implements OnInit, OnDestroy {
   sidenavState: boolean = true;
   rippleColor = "#04709e61";
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => {
-        return result.matches
-      })
-    );
+    .pipe(map(result => result.matches));
 
   constructor(
     private breakpointObserver: BreakpointObserver,
