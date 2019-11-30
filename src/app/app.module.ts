@@ -46,13 +46,13 @@ import { MainNavComponent } from './main/main-nav/main-nav.component';
     ToastrModule.forRoot(),
   ],
   providers: [
-    // { provide: ErrorHandler, useClass: AppErrorHandler },
+    { provide: ErrorHandler, useClass: AppErrorHandler },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 
-function tokenGetter() {
+export function tokenGetter() {
   return localStorage.getItem('token');
 }
