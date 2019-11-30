@@ -1,6 +1,7 @@
 $nav-height:60px;
 $side-width: 250px;
-$content-padding-y: 70px;
+$content-padding-top: 70px;
+$content-padding-down: 30px;
 $content-padding-x: 20px;
 $accent-color: #0578a6;
 $active-backgroundColor: #01171e;
@@ -16,7 +17,7 @@ $active-backgroundColor: #01171e;
   box-shadow: 0 5px 0.4rem rgba(5, 120, 166,0.6);
 }
 .sidenav-container {
-  height: calc( 100vh - $nav-height );
+  height: 100%;
 }
 
 .sidenav {
@@ -27,7 +28,7 @@ $active-backgroundColor: #01171e;
 }
 
 .content{
-  padding: $content-padding-y $content-padding-x;
+  padding: $content-padding-top $content-padding-x $content-padding-down $content-padding-x;
   overflow-y: hidden;
 }
 

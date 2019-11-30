@@ -17,7 +17,10 @@ export class MainNavComponent {
   rippleColor = "#04709e61";
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
-      map(result => result.matches)
+      map(result => {
+        this.sidenavState = false;
+        return result.matches
+      })
     );
 
   constructor(
