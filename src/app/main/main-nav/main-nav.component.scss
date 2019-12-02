@@ -29,7 +29,7 @@ $active-backgroundColor: #01171e;
 
 .content{
   padding: $content-padding-top $content-padding-right $content-padding-down $content-padding-left;
-  overflow-y: hidden;
+  overflow: auto;
 }
 
 mat-nav-list a{
