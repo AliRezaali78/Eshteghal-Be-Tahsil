@@ -1,8 +1,10 @@
 $nav-height:60px;
 $side-width: 250px;
-$content-padding-top: 70px;
+$content-padding-top: 90px;
 $content-padding-down: 30px;
-$content-padding-x: 20px;
+$content-padding-right: 40px;
+$content-padding-left: 20px;
+
 $accent-color: #0578a6;
 $active-backgroundColor: #01171e;
 .nav{
@@ -26,7 +28,7 @@ $active-backgroundColor: #01171e;
 }
 
 .content{
-  padding: $content-padding-top $content-padding-x $content-padding-down $content-padding-x;
+  padding: $content-padding-top $content-padding-right $content-padding-down $content-padding-left;
   overflow-y: hidden;
 }
 
