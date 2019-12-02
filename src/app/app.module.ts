@@ -21,8 +21,8 @@ import { MainNavComponent } from './main/main-nav/main-nav.component';
 import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_LANGUAGE } from 'ng-recaptcha';
 import { NewRequestComponent } from './main/student/new-request/new-request.component';
 import { RequestsComponent } from './main/student/requests/requests.component';
-import { ProfileComponent } from './profile/profile.component';
-import { ChangePasswordComponent } from './profile/change-password/change-password.component';
+import { ProfileComponent } from './main/profile/profile.component';
+import { ChangePasswordComponent } from './main/profile/change-password/change-password.component';
 @NgModule({
   declarations: [
     AppComponent,

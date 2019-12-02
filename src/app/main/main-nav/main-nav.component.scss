@@ -2,7 +2,7 @@ $nav-height:60px;
 $side-width: 250px;
 $content-padding-top: 90px;
 $content-padding-down: 30px;
-$content-padding-right: 40px;
+$content-padding-right: 20px;
 $content-padding-left: 20px;
 
 $accent-color: #0578a6;
@@ -31,6 +31,9 @@ $active-backgroundColor: #01171e;
   padding: $content-padding-top $content-padding-right $content-padding-down $content-padding-left;
   overflow: auto;
 }
+.content::-webkit-scrollbar { width: 0 !important }
+.content { overflow: -moz-scrollbars-none; }
+.element { -ms-overflow-style: none; }
 
 mat-nav-list a{
   color: #ffffff !important;

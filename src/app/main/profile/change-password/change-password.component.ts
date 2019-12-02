@@ -1,15 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-change-password',
+  selector: 'change-password',
   templateUrl: './change-password.component.html',
   styleUrls: ['./change-password.component.scss']
 })
-export class ChangePasswordComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class ChangePasswordComponent {
+  form: FormGroup;
+  constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      password: ['', Validators.required],
+      newPassword: ['', Validators.required],
+      confirmPassword: ['']
+    }, { validators: this.checkPasswords });
   }
 
+  checkPasswords(group: FormGroup) {
+    if (group.get("newPassword").value !== group.get("confirmPassword").value) {
+      group.get('confirmPassword').setErrors({ notMatching: true });
+      return { notMatching: true };
+    }
+
+    group.get('confirmPassword').setErrors(null);
+    return null;
+  }
+
+  get confirmPassword() {
+    return this.form.get('confirmPassword');
+  }
 }
