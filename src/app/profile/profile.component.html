@@ -1,8 +1,8 @@
 <div @fadeIn dir="rtl">
-  <div class="row mb-3">
+  <div id="account-information" class="row mb-3">
     <img [src]="image" class=" img-profile ml-4">
-    <div class="row col">
-      <div class="col-6 d-flex flex-column text-right mr-4">
+    <div id="detail-col" class="row col">
+      <div id="right-col" class="col-6 d-flex flex-column text-right">
         <h1 class="mat-h1">
           {{ user.name }} {{ user.lastname }}
         </h1>
@@ -19,7 +19,7 @@
           <span id="nationalCode">{{ user.nationalCode }}</span>
         </h3>
       </div>
-      <div class="col d-flex flex-column text-right" style="padding-top: 43px ;">
+      <div id="left-col" class="col d-flex flex-column justify-content-end text-right">
         <h3 class="mat-h3">
           <span class="font-weight-bold">رشته تحصیلی</span> :
           <span id="major">{{ user.major }}</span>
@@ -38,7 +38,6 @@
   <mat-card>
     <mat-card-content>
       <mat-tab-group #tabs dynamicHeight>
-        <mat-tab label="ویرایش پروفایل"></mat-tab>
         <mat-tab label="تغیر کلمه عبور"></mat-tab>
         <mat-tab label="تغیر عکس کاربری"></mat-tab>
       </mat-tab-group>

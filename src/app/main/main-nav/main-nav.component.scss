@@ -41,4 +41,9 @@ mat-nav-list a{
   background-color: $active-backgroundColor !important;
 }
 
+@media screen AND (max-width: 320px){
+  #logo{
+    font-size: 80% !important;
+  }
+}
 
