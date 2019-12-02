@@ -5,11 +5,10 @@
 .title{
     padding-bottom: 1rem ;
     font-size: 30px !important;
+    text-align: center;
 }
 
-.max-stretch{
-    max-width: 425px;
-}
+
 
 /* Medias */
 @media screen AND (max-width: 425px){

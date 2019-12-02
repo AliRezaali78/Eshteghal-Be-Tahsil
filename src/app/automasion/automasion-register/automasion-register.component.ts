@@ -20,11 +20,13 @@ export class AutomasionRegisterComponent implements OnInit {
     this.form = fb.group({
       name: ['', Validators.required],
       lastname: ['', Validators.required],
+      father: ['', Validators.required],
       studentCode: ['', [Validators.required, Validators.minLength(14), Validators.maxLength(14), CustomValidators.number]],
       nationalCode: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), CustomValidators.number]],
       reCaptcha: ['', Validators.required]
     });
   }
+
   ngOnInit() {
   }
 
@@ -32,6 +34,7 @@ export class AutomasionRegisterComponent implements OnInit {
     return (this.form.get('name').valid &&
       this.form.get('lastname').valid &&
       this.form.get('studentCode').valid &&
+      this.form.get('father').valid &&
       this.form.get('nationalCode')).valid ? true : false;
 
   }

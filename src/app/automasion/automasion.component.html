@@ -1,23 +1,25 @@
-<div dir="rtl" class="d-flex flex-column align-items-center justify-content-center " style="height: 100%;">
+<div dir="rtl" class="pt-5">
   <h1 class="text-shadow title">{{ title }}</h1>
-  <mat-card>
-    <mat-card-content>
-      <mat-tab-group dynamicHeight mat-stretch-tabs>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <i class="fa fa-sign-in ml-2"></i>
-            <span>ورود به سیستم</span>
-          </ng-template>
-          <automasion-login></automasion-login>
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <i class="fa fa-user-plus ml-2"></i>
-            <span>ثبت نام</span>
-          </ng-template>
-          <automasion-register></automasion-register>
-        </mat-tab>
-      </mat-tab-group>
-    </mat-card-content>
-  </mat-card>
+  <div class="d-flex justify-content-center">
+    <mat-card class="mb-3" style="max-width: 424px">
+      <mat-card-content>
+        <mat-tab-group dynamicHeight mat-stretch-tabs>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <i class="fa fa-sign-in ml-2"></i>
+              <span>ورود به سیستم</span>
+            </ng-template>
+            <automasion-login></automasion-login>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <i class="fa fa-user-plus ml-2"></i>
+              <span>ثبت نام</span>
+            </ng-template>
+            <automasion-register></automasion-register>
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
