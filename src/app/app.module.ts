@@ -19,6 +19,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptor } from './services/auth.interceptor.service';
 import { MainNavComponent } from './main/main-nav/main-nav.component';
 import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_LANGUAGE } from 'ng-recaptcha';
+import { NewRequestComponent } from './student/new-request/new-request.component';
+import { RequestsComponent } from './student/requests/requests.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ChangePasswordComponent } from './profile/change-password/change-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,11 @@ import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_LANGUAGE } from 'ng-re
     AutomasionRegisterComponent,
     MainComponent,
     NotFoundComponent,
-    MainNavComponent
+    MainNavComponent,
+    NewRequestComponent,
+    RequestsComponent,
+    ProfileComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
