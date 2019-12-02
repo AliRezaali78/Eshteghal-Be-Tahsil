@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { Router } from '@angular/router';
 import { MatSidenav } from '@angular/material';
+import { SidenavService } from 'src/app/services/sidenav/sidenav.service';
 
 @Component({
   selector: 'main-nav',
@@ -22,6 +23,7 @@ export class MainNavComponent implements OnInit, OnDestroy {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private authService: AuthService,
+    private sideNavService: SidenavService,
     private router: Router) {
 
   }
@@ -36,6 +38,7 @@ export class MainNavComponent implements OnInit, OnDestroy {
 
   toggleSideNav() {
     this.sidenav.toggle();
+    this.sideNavService.switch.next();
   }
 
   logout() {
