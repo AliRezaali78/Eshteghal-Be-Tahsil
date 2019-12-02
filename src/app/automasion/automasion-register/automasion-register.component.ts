@@ -2,6 +2,7 @@ import { fadeInOut, fadeIn, fadeInOutCustom } from './../../common/animations/fa
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { CustomValidators } from 'ng2-validation';
+import { Event } from '@angular/router';
 
 @Component({
   selector: 'automasion-register',
@@ -12,8 +13,9 @@ import { CustomValidators } from 'ng2-validation';
   ]
 })
 export class AutomasionRegisterComponent implements OnInit {
-  @Input('regForm') form: FormGroup;
+  form: FormGroup;
   sk = "6LduRcQUAAAAAJW6-ot5RJBEt-5IfsSevCFxfbev";
+  loading = false;
   constructor(fb: FormBuilder) {
     this.form = fb.group({
       name: ['', Validators.required],
@@ -34,11 +36,10 @@ export class AutomasionRegisterComponent implements OnInit {
 
   }
 
-  reset() {
-    this.form.reset();
+  register() {
+    this.loading = true
+    this.form.disable();
   }
 
-  register() {
-  }
 
 }
