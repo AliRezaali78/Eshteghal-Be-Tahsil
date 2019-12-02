@@ -15,11 +15,7 @@ const routes: Routes = [
     path: "main", component: MainComponent, canActivate: [AuthGuard], children: [
       { path: "new-request", component: NewRequestComponent },
       { path: "requests", component: RequestsComponent },
-      {
-        path: "profile", component: ProfileComponent, children: [
-          { path: "change-password", component: ChangePasswordComponent },
-        ]
-      },
+      { path: "profile", component: ProfileComponent },
     ]
   },
   { path: "", component: AutomasionComponent },

@@ -1,3 +1,27 @@
-<p>
-  profile works!
-</p>
+<div dir="rtl">
+  <div class="d-flex mb-3">
+    <img [src]="image" class="img-profile ml-4">
+    <div class="d-flex flex-column text-right">
+      <h1 class="mat-h1">
+        حسن رضایی
+      </h1>
+      <h3 class="mat-h3">
+        <span class="font-weight-bold">نام پدر</span> : <span id="father">احمد</span>
+      </h3>
+      <h3 class="mat-h3">
+        <span class="font-weight-bold">شماره دانشجویی</span> : <span id="studentCode">۱۳۶۳۸۸۲۲۴۴۵۶۷۸</span>
+      </h3>
+      <h3 class="mat-h3">
+        <span class="font-weight-bold">کد ملی</span> : <span id="nationalCode">۱۳۶۳۸۸۲۲۴۴</span>
+      </h3>
+    </div>
+  </div>
+  <mat-card>
+    <mat-card-content>
+      <mat-tab-group dynamicHeight>
+        <mat-tab label="تغیر کلمه عبور"></mat-tab>
+        <mat-tab label="تغیر عکس کاربری"></mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>
