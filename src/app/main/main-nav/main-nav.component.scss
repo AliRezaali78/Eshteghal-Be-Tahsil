@@ -10,9 +10,7 @@ $active-backgroundColor: #01171e;
   position: fixed;
   z-index: 2 !important;
 }
-.half-shadow{
-  box-shadow: -$side-width 5px 0.4rem rgba(5, 120, 166,0.6);
-}
+
 .full-shadow{
   box-shadow: 0 5px 0.4rem rgba(5, 120, 166,0.6);
 }
