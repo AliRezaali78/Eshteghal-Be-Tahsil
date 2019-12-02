@@ -14,4 +14,5 @@ export class AutomasionComponent implements OnInit {
     this.titleService.setTitle('اتوماسیون')
   }
 
+
 }

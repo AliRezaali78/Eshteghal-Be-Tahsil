@@ -18,7 +18,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptor } from './services/auth.interceptor.service';
 import { MainNavComponent } from './main/main-nav/main-nav.component';
-
+import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_LANGUAGE } from 'ng-recaptcha';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +37,9 @@ import { MainNavComponent } from './main/main-nav/main-nav.component';
     FormsModule,
     ReactiveFormsModule,
     CustomFormsModule,
+    RecaptchaFormsModule, RecaptchaModule,
     HttpClientModule,
+
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter
@@ -46,8 +48,9 @@ import { MainNavComponent } from './main/main-nav/main-nav.component';
     ToastrModule.forRoot(),
   ],
   providers: [
-    { provide: ErrorHandler, useClass: AppErrorHandler },
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    // { provide: ErrorHandler, useClass: AppErrorHandler },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: RECAPTCHA_LANGUAGE, useValue: 'fa' }
   ],
   bootstrap: [AppComponent]
 })

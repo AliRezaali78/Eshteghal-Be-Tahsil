@@ -26,6 +26,10 @@
         <mat-error>لطفا کد ملی را صحیح وارد کنید</mat-error>
       </mat-form-field>
     </div>
-    <button mat-raised-button color="primary" [disabled]="!form.valid">ثبت نام</button>
+    <div class="form-group d-flex justify-content-center">
+      <re-captcha formControlName="reCaptcha" [siteKey]="sk" [@fadeInOutCustom]="showCaptcha ? 'show' : 'hide'">
+      </re-captcha>
+    </div>
+    <button mat-raised-button color="primary" [disabled]="!form.valid" (click)="register()">ثبت نام</button>
   </div>
 </form>

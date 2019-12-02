@@ -41,3 +41,16 @@ export let fadeOut = trigger('fadeOut', [
         useAnimation(fadeOutAnimation)
     ])
 ])
+
+// Custom 
+
+export let fadeInOutCustom = trigger('fadeInOutCustom', [
+    state('hide', style({ opacity: 0, marginBottom: 0, height: 0 })),
+    state('show', style({ opacity: 1, marginBottom: '5px', height: '78px' })),
+    transition('hide => show', [
+        animate('500ms ease-out')
+    ]),
+    transition('show => hide', [
+        animate('500ms ease-in')
+    ])
+]);
