@@ -7,7 +7,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   providedIn: 'root'
 })
 export class AuthService {
-  private fakeToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwibmFtZSI6Iti52YTbjCIsImxhc3RuYW1lIjoi2LHYttin2LnZhNuMIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE1MTYyMzkwMjJ9.aBEV8BYbhPxJQuWCvvn_jw-0zFvaJKjAM1h9f0pR-Kg";
+  private fakeToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwibmFtZSI6Itit2LPZhiIsImxhc3RuYW1lIjoi2LHYttin24zbjCIsImZhdGhlciI6Itin2K3ZhdivIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE1MTYyMzkwMjJ9.qqilky7G32J0Zg3Gn8EWyafgeafcQWlpzTdhV57sNcc";
   constructor(private jwt: JwtHelperService) { }
 
   login(credentials) {
