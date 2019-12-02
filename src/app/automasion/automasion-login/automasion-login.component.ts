@@ -31,7 +31,7 @@ export class AutomasionLoginComponent implements OnInit {
       this.loading = false;
       if (result) {
         this.invalidLogin = false;
-        this.router.navigate([returnUrl || '/main']);
+        this.router.navigate([returnUrl || '/main/profile']);
       } else this.invalidLogin = true;
     }, (error: AppError) => {
       this.loading = false;
