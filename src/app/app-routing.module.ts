@@ -7,8 +7,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ChangePasswordComponent } from './profile/change-password/change-password.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './services/guards/auth-guard.service';
-import { NewRequestComponent } from './student/new-request/new-request.component';
-import { RequestsComponent } from './student/requests/requests.component';
+import { NewRequestComponent } from './main/student/new-request/new-request.component';
+import { RequestsComponent } from './main/student/requests/requests.component';
 
 const routes: Routes = [
   {
