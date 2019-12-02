@@ -39,6 +39,11 @@ export class AutomasionRegisterComponent implements OnInit {
 
   }
 
+
+  resetCaptcha() {
+    this.form.get('reCaptcha').reset();
+  }
+
   register() {
     this.loading = true
     this.form.disable();

@@ -6,8 +6,10 @@
         <mat-tab-group dynamicHeight mat-stretch-tabs>
           <mat-tab>
             <ng-template mat-tab-label>
-              <i class="fa fa-sign-in ml-2"></i>
-              <span>ورود به سیستم</span>
+              <div (click)="tab.resetCaptcha()">
+                <i class="fa fa-sign-in ml-2"></i>
+                <span>ورود به سیستم</span>
+              </div>
             </ng-template>
             <automasion-login></automasion-login>
           </mat-tab>
@@ -16,7 +18,7 @@
               <i class="fa fa-user-plus ml-2"></i>
               <span>ثبت نام</span>
             </ng-template>
-            <automasion-register></automasion-register>
+            <automasion-register #tab></automasion-register>
           </mat-tab>
         </mat-tab-group>
       </mat-card-content>
