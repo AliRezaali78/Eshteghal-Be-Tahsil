@@ -1,0 +1,28 @@
+.img-profile{
+    width: 150px; height: 150px;
+    border-radius: 100%;
+}
+
+
+
+@media screen AND (max-width: 425px){
+    #account-information{
+        display: block;
+        text-align: center;
+    }
+    #account-information img{
+        margin-bottom: 1.5rem !important;
+        margin-left: 0 !important;
+    }
+}
+@media screen AND (max-width: 375px){
+    #detail-col{
+        padding-left: 0;
+    }
+    #right-col{
+        padding-right: 0;
+    }
+    #left-col{
+        padding-left: 0;
+    }
+}
