@@ -1,3 +1,4 @@
+import { ChangeProfileImgComponent } from './main/profile/change-profile-img/change-profile-img.component';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -39,7 +40,8 @@ import { B4SpinnerComponent } from './b4-spinner/b4-spinner.component';
     ProfileComponent,
     ChangePasswordComponent,
     ProfileInformationComponent,
-    B4SpinnerComponent
+    B4SpinnerComponent,
+    ChangeProfileImgComponent
   ],
   imports: [
     BrowserModule,
