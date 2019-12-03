@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-profile',
+  selector: 'profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss'],
   animations: [fadeIn]

@@ -10,7 +10,7 @@ export class ProfileInformationComponent {
   constructor() { }
 
   get image() {
-    return "../../assets/images/profile-placeholder.png";
+    return "assets/images/profile-placeholder.png";
   }
 
 }
