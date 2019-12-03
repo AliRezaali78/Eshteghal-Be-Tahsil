@@ -24,6 +24,7 @@ import { RequestsComponent } from './main/student/requests/requests.component';
 import { ProfileComponent } from './main/profile/profile.component';
 import { ChangePasswordComponent } from './main/profile/change-password/change-password.component';
 import { ProfileInformationComponent } from './main/profile/profile-information/profile-information.component';
+import { B4SpinnerComponent } from './b4-spinner/b4-spinner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { ProfileInformationComponent } from './main/profile/profile-information/
     RequestsComponent,
     ProfileComponent,
     ChangePasswordComponent,
-    ProfileInformationComponent
+    ProfileInformationComponent,
+    B4SpinnerComponent
   ],
   imports: [
     BrowserModule,

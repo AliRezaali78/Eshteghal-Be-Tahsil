@@ -8,6 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ChangePasswordComponent {
   form: FormGroup;
+  loading = false;
+  invalidChange = false;
   constructor(fb: FormBuilder) {
     this.form = fb.group({
       password: ['', Validators.required],
@@ -16,6 +18,7 @@ export class ChangePasswordComponent {
     }, { validators: this.checkPasswords });
   }
 
+  //validation
   checkPasswords(group: FormGroup) {
     if (group.get("newPassword").value !== group.get("confirmPassword").value) {
       group.get('confirmPassword').setErrors({ notMatching: true });
@@ -31,6 +34,11 @@ export class ChangePasswordComponent {
   }
   get confirmPassword() {
     return this.form.get('confirmPassword');
+  }
+
+  changePassword() {
+    this.loading = true;
+    this.form.disable();
   }
 
 }
