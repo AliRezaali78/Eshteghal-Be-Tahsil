@@ -16,6 +16,8 @@ export class AutomasionRegisterComponent {
   form: FormGroup;
   sk = "6LduRcQUAAAAAJW6-ot5RJBEt-5IfsSevCFxfbev";
   loading = false;
+  success = false;
+  invalidRegister = false;
   majors = [
     { id: 1, value: "کامپیوتر - نرم افزار کامپیوتر" },
     { id: 2, value: "الکترونیک" },

@@ -1,4 +1,8 @@
 <form [formGroup]="form" (ngSubmit)="register()" style="padding:16px;">
+  <mat-error *ngIf="invalidRegister" class="mat-text-warn text-right">
+    شماره دانشجویی / شماره ملی از قبل ثبت شده
+  </mat-error>
+  <div *ngIf="success" class="text-success text-right">اطالاعت شما با موفقیت ثبت شد، منتظر تایید ادمین...</div>
   <div class="py-3">
     <div id="contact" class="d-flex">
       <div class="form-group">
