@@ -24,9 +24,7 @@ export class ProfileComponent implements OnInit {
     })
   }
 
-  get image() {
-    return "../../assets/images/profile-placeholder.png";
-  }
+
   get user() {
     return this.auth.currentUser;
   }

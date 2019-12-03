@@ -23,6 +23,7 @@ import { NewRequestComponent } from './main/student/new-request/new-request.comp
 import { RequestsComponent } from './main/student/requests/requests.component';
 import { ProfileComponent } from './main/profile/profile.component';
 import { ChangePasswordComponent } from './main/profile/change-password/change-password.component';
+import { ProfileInformationComponent } from './main/profile/profile-information/profile-information.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { ChangePasswordComponent } from './main/profile/change-password/change-p
     NewRequestComponent,
     RequestsComponent,
     ProfileComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    ProfileInformationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,40 +1,5 @@
 <div @fadeIn dir="rtl">
-  <div id="account-information" class="row mb-3">
-    <img [src]="image" class=" img-profile ml-4">
-    <div id="detail-col" class="row col">
-      <div id="right-col" class="col-6 d-flex flex-column text-right">
-        <h1 class="mat-h1">
-          {{ user.name }} {{ user.lastname }}
-        </h1>
-        <h3 class="mat-h3">
-          <span class="font-weight-bold">نام پدر</span> :
-          <span id="father">{{ user.father }}</span>
-        </h3>
-        <h3 class="mat-h3">
-          <span class="font-weight-bold">شماره دانشجویی</span> :
-          <span id="studentCode">{{ user.studentCode }}</span>
-        </h3>
-        <h3 class="mat-h3">
-          <span class="font-weight-bold">کد ملی</span> :
-          <span id="nationalCode">{{ user.nationalCode }}</span>
-        </h3>
-      </div>
-      <div id="left-col" class="col d-flex flex-column justify-content-end text-right">
-        <h3 class="mat-h3">
-          <span class="font-weight-bold">رشته تحصیلی</span> :
-          <span id="major">{{ user.major }}</span>
-        </h3>
-        <h3 class="mat-h3">
-          <span class="font-weight-bold">مقطع</span> :
-          <span id="studentCode">{{ user.level }}</span>
-        </h3>
-        <h3 class="mat-h3">
-          <span class="font-weight-bold">دوره</span> :
-          <span id="nationalCode">{{ user.type }}</span>
-        </h3>
-      </div>
-    </div>
-  </div>
+  <profile-information [user]="user"></profile-information>
   <mat-card>
     <mat-card-content class="text-right">
       <mat-tab-group #tabs dynamicHeight>
