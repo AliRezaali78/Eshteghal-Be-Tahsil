@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { MatProgressBar } from '@angular/material';
 
 @Component({
   selector: 'change-profile-img',
@@ -8,6 +9,7 @@ import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms'
 })
 export class ChangeProfileImgComponent {
   @ViewChild('imageFile') imageFile: ElementRef;
+  uploadValue = 0;
   form: FormGroup;
   validFile = false;
   file: File;
@@ -33,6 +35,18 @@ export class ChangeProfileImgComponent {
   uploadImage() {
     this.form.disable();
     this.uploading = true;
+    setInterval(() => {
+      if (this.uploading && this.uploadValue < 100)
+        this.uploadValue += 2;
+      else {
+        this.uploadValue = 0;
+        this.uploading = false;
+        this.validFile = false;
+        this.form.reset();
+        this.form.enable();
+      }
+    }, 200)
+    //when uploaded call profile service subject.next() to inform profile image to change
   }
 
   isimage(file: File) {

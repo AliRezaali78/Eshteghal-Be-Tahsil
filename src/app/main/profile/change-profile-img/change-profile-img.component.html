@@ -13,4 +13,8 @@
       <b4-spinner></b4-spinner>
     </ng-template>
   </button>
+  <div class="pt-3" *ngIf="uploading">
+    <mat-progress-bar #bar mode="determinate" [value]="uploadValue">
+    </mat-progress-bar>
+  </div>
 </form>
