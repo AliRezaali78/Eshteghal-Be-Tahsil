@@ -11,11 +11,11 @@
       </h3>
       <h3 class="mat-h3">
         <span class="font-weight-bold">شماره دانشجویی</span> :
-        <span id="studentCode">{{ user.studentCode }}</span>
+        <span id="studentCode">{{ user.studentCode | persianNumber }}</span>
       </h3>
       <h3 class="mat-h3">
         <span class="font-weight-bold">کد ملی</span> :
-        <span id="nationalCode">{{ user.nationalCode }}</span>
+        <span id="nationalCode">{{ user.nationalCode | persianNumber }}</span>
       </h3>
     </div>
     <div id="left-col" class="col d-flex flex-column justify-content-end text-right">
