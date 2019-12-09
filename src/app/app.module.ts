@@ -26,6 +26,7 @@ import { ProfileComponent } from './main/profile/profile.component';
 import { ChangePasswordComponent } from './main/profile/change-password/change-password.component';
 import { ProfileInformationComponent } from './main/profile/profile-information/profile-information.component';
 import { B4SpinnerComponent } from './b4-spinner/b4-spinner.component';
+import { PersianDatePipe } from './common/pipes/persian-date.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { B4SpinnerComponent } from './b4-spinner/b4-spinner.component';
     ChangePasswordComponent,
     ProfileInformationComponent,
     B4SpinnerComponent,
-    ChangeProfileImgComponent
+    ChangeProfileImgComponent,
+    PersianDatePipe
   ],
   imports: [
     BrowserModule,

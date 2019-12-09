@@ -4,6 +4,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { CustomValidators } from 'ng2-validation';
 import { Event } from '@angular/router';
 import { NumberValidators } from 'src/app/common/validators/number.validators';
+import * as moment from 'jalali-moment';
 
 @Component({
   selector: 'automasion-register',
@@ -14,6 +15,7 @@ import { NumberValidators } from 'src/app/common/validators/number.validators';
   ]
 })
 export class AutomasionRegisterComponent {
+  testDate;
   form: FormGroup;
   sk = "6LduRcQUAAAAAJW6-ot5RJBEt-5IfsSevCFxfbev";
   loading = false;
@@ -26,6 +28,7 @@ export class AutomasionRegisterComponent {
   ]
   constructor(private fb: FormBuilder) {
     this.form = this.createForm();
+    this.testDate = Date.now();
   }
 
   createForm() {
