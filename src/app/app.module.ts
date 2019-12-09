@@ -27,6 +27,8 @@ import { ChangePasswordComponent } from './main/profile/change-password/change-p
 import { ProfileInformationComponent } from './main/profile/profile-information/profile-information.component';
 import { B4SpinnerComponent } from './b4-spinner/b4-spinner.component';
 import { PersianDatePipe } from './common/pipes/persian-date.pipe';
+import { PersianNumberService } from './services/persian-services/persian-number.service';
+import { PersianNumberPipe } from './common/pipes/persian-number.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,8 @@ import { PersianDatePipe } from './common/pipes/persian-date.pipe';
     ProfileInformationComponent,
     B4SpinnerComponent,
     ChangeProfileImgComponent,
-    PersianDatePipe
+    PersianDatePipe,
+    PersianNumberPipe,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,6 @@ import { PersianDatePipe } from './common/pipes/persian-date.pipe';
     CustomFormsModule,
     RecaptchaFormsModule, RecaptchaModule,
     HttpClientModule,
-
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter
@@ -64,6 +66,7 @@ import { PersianDatePipe } from './common/pipes/persian-date.pipe';
     ToastrModule.forRoot(),
   ],
   providers: [
+    PersianNumberService,
     // { provide: ErrorHandler, useClass: AppErrorHandler },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: RECAPTCHA_LANGUAGE, useValue: 'fa' }
