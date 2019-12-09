@@ -3,6 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { CustomValidators } from 'ng2-validation';
 import { Event } from '@angular/router';
+import { NumberValidators } from 'src/app/common/validators/number.validators';
 
 @Component({
   selector: 'automasion-register',
@@ -32,8 +33,10 @@ export class AutomasionRegisterComponent {
       name: ['', Validators.required],
       lastname: ['', Validators.required],
       father: ['', Validators.required],
-      studentCode: ['', [Validators.required, Validators.minLength(14), Validators.maxLength(14), CustomValidators.number]],
-      nationalCode: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), CustomValidators.number]],
+      studentCode: ['', [Validators.required, Validators.minLength(14), Validators.maxLength(14),
+      NumberValidators.shouldBeNumber]],
+      nationalCode: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10),
+      NumberValidators.shouldBeNumber]],
       major: ['', Validators.required],
       level: ['', Validators.required],
       type: ['', Validators.required],
