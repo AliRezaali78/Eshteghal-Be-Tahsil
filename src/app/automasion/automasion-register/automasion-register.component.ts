@@ -1,10 +1,9 @@
-import { fadeInOut, fadeIn, fadeInOutCustom } from './../../common/animations/fade.animation';
-import { Component, OnInit, Input } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { CustomValidators } from 'ng2-validation';
-import { Event } from '@angular/router';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NationalCodeValidators } from 'src/app/common/validators/national-code.validators';
 import { NumberValidators } from 'src/app/common/validators/number.validators';
-import * as moment from 'jalali-moment';
+
+import { fadeInOutCustom } from './../../common/animations/fade.animation';
 
 @Component({
   selector: 'automasion-register',
@@ -12,10 +11,10 @@ import * as moment from 'jalali-moment';
   styleUrls: ['./automasion-register.component.css'],
   animations: [
     fadeInOutCustom
-  ]
+  ],
+  providers: [NationalCodeValidators]
 })
 export class AutomasionRegisterComponent {
-  testDate;
   form: FormGroup;
   sk = "6LduRcQUAAAAAJW6-ot5RJBEt-5IfsSevCFxfbev";
   loading = false;
@@ -26,9 +25,8 @@ export class AutomasionRegisterComponent {
     { id: 2, value: "الکترونیک" },
     { id: 3, value: "برق" },
   ]
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private nationalCodeValidators: NationalCodeValidators) {
     this.form = this.createForm();
-    this.testDate = Date.now();
   }
 
   createForm() {
@@ -39,7 +37,7 @@ export class AutomasionRegisterComponent {
       studentCode: ['', [Validators.required, Validators.minLength(14), Validators.maxLength(14),
       NumberValidators.shouldBeNumber]],
       nationalCode: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10),
-      NumberValidators.shouldBeNumber]],
+      NumberValidators.shouldBeNumber, this.nationalCodeValidators.shouldBeNationalCode.bind(this.nationalCodeValidators)]],
       major: ['', Validators.required],
       level: ['', Validators.required],
       type: ['', Validators.required],

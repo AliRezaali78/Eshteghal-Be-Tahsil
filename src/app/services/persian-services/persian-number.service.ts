@@ -17,11 +17,11 @@ export class PersianNumberService {
     return regexp.test(num);
   }
 
-  toEngNumber(number: string): number {
+  toEngNumber(number: string) {
     var num = number as string;
     var engNumber = this.persianNumberToEng(num);
 
-    if (isNaN(engNumber))
+    if (isNaN(+engNumber))
       throw `${number} is not valid persian Number`;
     return engNumber;
   }
@@ -53,7 +53,7 @@ export class PersianNumberService {
     return str;
   }
 
-  private persianNumberToEng(number: string): number {
+  private persianNumberToEng(number: string) {
     if (number == undefined) return NaN;
     var str = number.toString().trim();
     var str = number.toString().trim();
@@ -68,6 +68,6 @@ export class PersianNumberService {
     str = str.replace(/۷/g, '7');
     str = str.replace(/۸/g, '8');
     str = str.replace(/۹/g, '9');
-    return Number(str);
+    return str;
   }
 }
