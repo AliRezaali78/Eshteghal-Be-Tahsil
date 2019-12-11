@@ -16,4 +16,8 @@ export class NewRequestComponent implements OnInit {
     return this.option === 'سازمان' ? 'سازمان' : 'مرکز'
   }
 
+  sendRequest(form) {
+    console.log(form.value);
+  }
+
 }

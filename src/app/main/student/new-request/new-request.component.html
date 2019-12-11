@@ -1,4 +1,4 @@
-<div dir="rtl">
+<form dir="rtl" #form="ngForm" (ngSubmit)="sendRequest(form)">
   <mat-card>
     <mat-card-header>
       <mat-card-title>درخواست جدید</mat-card-title>
@@ -6,24 +6,25 @@
     <mat-divider></mat-divider>
     <mat-card-content class="text-right pt-4">
       <div class="form-group">
-        <mat-radio-group [(ngModel)]="option">
+        <mat-radio-group name="option" [(ngModel)]="option">
           <mat-radio-button class="ml-3" value="مرکز">مرکز</mat-radio-button>
           <mat-radio-button value="سازمان">سازمان</mat-radio-button>
         </mat-radio-group>
       </div>
       <div class="form-group">
         <mat-form-field style="width: 25%;">
-          <input matInput [placeholder]="'به '+optionPlaceholder">
+          <input matInput ngModel required name="optionValue" [placeholder]="'به '+optionPlaceholder">
+          <mat-error>فیلد مرکز/ سازمان الزامی می باشد</mat-error>
         </mat-form-field>
       </div>
       <mat-form-field style="width:40%;">
-        <textarea #desc matInput cdkTextareaAutosize maxlength="256" cdkAutosizeMinRows="2" placeholder="توضیحات"
-          style=" overflow-y: hidden; line-height: 1.5rem;"></textarea>
+        <textarea #desc matInput ngModel name="description" cdkTextareaAutosize maxlength="256" cdkAutosizeMinRows="2"
+          placeholder="توضیحات" style=" overflow-y: hidden; line-height: 1.5rem;"></textarea>
         <mat-hint dir="ltr" align="end">{{ desc.value.length | persianNumber }} / {{ 256 | persianNumber}}</mat-hint>
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary">ارسال</button>
+      <button mat-raised-button color="primary" [disabled]="!form.valid">ارسال</button>
     </mat-card-actions>
   </mat-card>
-</div>
+</form>
