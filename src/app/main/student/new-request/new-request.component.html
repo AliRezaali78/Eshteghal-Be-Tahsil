@@ -17,11 +17,17 @@
           <mat-error>فیلد مرکز/ سازمان الزامی می باشد</mat-error>
         </mat-form-field>
       </div>
-      <mat-form-field style="width:40%;">
-        <textarea #desc matInput ngModel name="description" cdkTextareaAutosize maxlength="256" cdkAutosizeMinRows="2"
-          placeholder="توضیحات" style=" overflow-y: hidden; line-height: 1.5rem;"></textarea>
-        <mat-hint dir="ltr" align="end">{{ desc.value.length | persianNumber }} / {{ 256 | persianNumber}}</mat-hint>
-      </mat-form-field>
+      <div class="form-group">
+        <mat-form-field style="width:40%;">
+          <textarea #desc matInput ngModel name="description" cdkTextareaAutosize maxlength="256" cdkAutosizeMinRows="2"
+            placeholder="توضیحات" style=" overflow-y: hidden; line-height: 1.5rem;"></textarea>
+          <mat-hint dir="ltr" align="end">{{ desc.value.length | persianNumber }} / {{ 256 | persianNumber}}</mat-hint>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <re-captcha required ngModel name="reCaptcha" [siteKey]="sk">
+        </re-captcha>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" [disabled]="!form.valid">ارسال</button>

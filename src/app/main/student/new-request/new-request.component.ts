@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewRequestComponent implements OnInit {
   option = "مرکز";
+  sk = "6LduRcQUAAAAAJW6-ot5RJBEt-5IfsSevCFxfbev";
+
   constructor() { }
 
   ngOnInit() {
