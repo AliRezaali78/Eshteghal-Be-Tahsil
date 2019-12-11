@@ -12,19 +12,19 @@
         </mat-radio-group>
       </div>
       <div class="form-group">
-        <mat-form-field style="width: 25%;">
+        <mat-form-field class="optionInput">
           <input matInput ngModel required name="optionValue" [placeholder]="'به '+optionPlaceholder">
           <mat-error>فیلد مرکز/ سازمان الزامی می باشد</mat-error>
         </mat-form-field>
       </div>
       <div class="form-group">
-        <mat-form-field style="width:40%;">
+        <mat-form-field class="descriptionInput">
           <textarea #desc matInput ngModel name="description" cdkTextareaAutosize maxlength="256" cdkAutosizeMinRows="2"
             placeholder="توضیحات" style=" overflow-y: hidden; line-height: 1.5rem;"></textarea>
           <mat-hint dir="ltr" align="end">{{ desc.value.length | persianNumber }} / {{ 256 | persianNumber}}</mat-hint>
         </mat-form-field>
       </div>
-      <div class="form-group">
+      <div class="py-2" style="overflow-x: auto;">
         <re-captcha required ngModel name="reCaptcha" [siteKey]="sk">
         </re-captcha>
       </div>

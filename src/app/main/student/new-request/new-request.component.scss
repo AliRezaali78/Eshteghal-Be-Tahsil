@@ -1,0 +1,31 @@
+.descriptionInput{
+    width: 40%;
+}
+.optionInput{
+    width: 25%;
+}
+
+@media screen AND (max-width: 1024px){
+    .descriptionInput{
+        width: 50%;
+    }
+    .optionInput{
+        width: 35%;
+    }
+}
+@media screen AND (max-width: 600px){
+    .descriptionInput{
+        width: 65%;
+    }
+    .optionInput{
+        width: 50%;
+    }
+}
+@media screen AND (max-width: 500px){
+    .descriptionInput{
+        width: 100%;
+    }
+    .optionInput{
+        width: 100%;
+    }
+}
