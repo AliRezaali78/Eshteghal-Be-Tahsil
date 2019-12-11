@@ -8,4 +8,5 @@ export interface User {
     dateStart: string;
     level: string;
     type: string;
+    admin: boolean;
 }
