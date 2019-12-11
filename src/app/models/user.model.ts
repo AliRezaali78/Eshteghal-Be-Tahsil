@@ -5,6 +5,7 @@ export interface User {
     studentCode: number;
     nationalCode: number;
     major: string;
+    dateStart: string;
     level: string;
     type: string;
 }

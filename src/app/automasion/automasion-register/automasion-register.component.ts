@@ -39,6 +39,8 @@ export class AutomasionRegisterComponent {
       nationalCode: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10),
       NumberValidators.shouldBeNumber, this.nationalCodeValidators.shouldBeNationalCode.bind(this.nationalCodeValidators)]],
       major: ['', Validators.required],
+      startDate: ['', [Validators.required, NumberValidators.shouldBeStartDate]],
+      startDateOption: ['', Validators.required],
       level: ['', Validators.required],
       type: ['', Validators.required],
       reCaptcha: ['', Validators.required]
