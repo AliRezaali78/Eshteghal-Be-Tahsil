@@ -1,9 +1,11 @@
+import { fadeIn } from './../../../common/animations/fade.animation';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-new-request',
   templateUrl: './new-request.component.html',
-  styleUrls: ['./new-request.component.scss']
+  styleUrls: ['./new-request.component.scss'],
+  animations: [fadeIn]
 })
 export class NewRequestComponent implements OnInit {
   option = "مرکز";
