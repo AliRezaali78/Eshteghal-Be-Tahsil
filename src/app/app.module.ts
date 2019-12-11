@@ -28,6 +28,7 @@ import { MaterialsModule } from './materials-module/materials.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthInterceptor } from './services/auth.interceptor.service';
 import { PersianNumberService } from './services/persian-services/persian-number.service';
+import { ShowRequestComponent } from './main/student/show-request/show-request.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PersianNumberService } from './services/persian-services/persian-number
     ChangeProfileImgComponent,
     PersianDatePipe,
     PersianNumberPipe,
+    ShowRequestComponent,
   ],
   imports: [
     BrowserModule,

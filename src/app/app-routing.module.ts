@@ -8,12 +8,14 @@ import { AuthGuard } from './services/guards/auth-guard.service';
 import { NewRequestComponent } from './main/student/new-request/new-request.component';
 import { RequestsComponent } from './main/student/requests/requests.component';
 import { ProfileComponent } from './main/profile/profile.component';
+import { ShowRequestComponent } from './main/student/show-request/show-request.component';
 
 const routes: Routes = [
   {
     path: "main", component: MainComponent, canActivate: [AuthGuard], children: [
       { path: "new-request", component: NewRequestComponent },
       { path: "requests", component: RequestsComponent },
+      { path: "requests/:id", component: ShowRequestComponent },
       { path: "profile", component: ProfileComponent },
     ]
   },
