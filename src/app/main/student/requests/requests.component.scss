@@ -10,10 +10,16 @@ th{
     #table{
         width: 650px !important;
     }
+    #paginator{
+        width: 650px !important;
+    }
 }
 
 @media screen AND (max-width: 425px){
     #table{
+        width: 525px !important;
+    }
+    #paginator{
         width: 525px !important;
     }
 }
