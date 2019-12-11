@@ -29,6 +29,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthInterceptor } from './services/auth.interceptor.service';
 import { PersianNumberService } from './services/persian-services/persian-number.service';
 import { ShowRequestComponent } from './main/student/show-request/show-request.component';
+import { TableSpinnerComponent } from './table-spinner/table-spinner.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ShowRequestComponent } from './main/student/show-request/show-request.c
     PersianDatePipe,
     PersianNumberPipe,
     ShowRequestComponent,
+    TableSpinnerComponent,
   ],
   imports: [
     BrowserModule,
