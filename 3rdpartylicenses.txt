@@ -95,6 +95,8 @@ THE SOFTWARE.
 
 @angular/material/dialog
 
+@angular/material/divider
+
 @angular/material/form-field
 
 @angular/material/icon
@@ -103,7 +105,11 @@ THE SOFTWARE.
 
 @angular/material/menu
 
+@angular/material/paginator
+
 @angular/material/progress-bar
+
+@angular/material/progress-spinner
 
 @angular/material/radio
 
@@ -112,6 +118,10 @@ THE SOFTWARE.
 @angular/material/sidenav
 
 @angular/material/snack-bar
+
+@angular/material/sort
+
+@angular/material/table
 
 @angular/material/tabs
 
