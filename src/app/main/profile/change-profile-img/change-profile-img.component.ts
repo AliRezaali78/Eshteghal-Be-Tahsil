@@ -8,7 +8,7 @@ import { MatProgressBar } from '@angular/material';
   styleUrls: ['./change-profile-img.component.scss']
 })
 export class ChangeProfileImgComponent {
-  @ViewChild('imageFile') imageFile: ElementRef;
+  @ViewChild('imageFile', { static: true }) imageFile: ElementRef;
   uploadValue = 0;
   form: FormGroup;
   validFile = false;

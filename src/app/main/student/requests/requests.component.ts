@@ -11,8 +11,8 @@ import { MatPaginator, MatTableDataSource, MatPaginatorIntl, MatSort } from '@an
 })
 export class RequestsComponent implements OnInit {
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
   dataSource = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'option', 'to', 'status', 'actions'];
   requests = [

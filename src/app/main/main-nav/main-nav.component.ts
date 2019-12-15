@@ -14,7 +14,7 @@ import { SidenavService } from 'src/app/services/sidenav/sidenav.service';
 })
 export class MainNavComponent implements OnInit, OnDestroy {
   sub: Subscription;
-  @ViewChild('sidenav') sidenav: MatSidenav;
+  @ViewChild('sidenav', { static: true }) sidenav: MatSidenav;
   sidenavState: boolean = true;
   rippleColor = "#04709e61";
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)

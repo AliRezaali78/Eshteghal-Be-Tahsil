@@ -13,7 +13,7 @@ import { delay } from 'rxjs/operators';
   animations: [fadeIn]
 })
 export class ProfileComponent implements OnInit, OnDestroy {
-  @ViewChild('tabs') tabs: MatTabGroup;
+  @ViewChild('tabs', { static: true }) tabs: MatTabGroup;
   subs: Subscription;
   constructor(private auth: AuthService, private sidenav: SidenavService) {
   }
