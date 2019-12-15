@@ -17,6 +17,10 @@ const routes: Routes = [
       { path: "requests", component: RequestsComponent },
       { path: "requests/:id", component: ShowRequestComponent },
       { path: "profile", component: ProfileComponent },
+
+      { path: "students", component: NotFoundComponent },
+      { path: "new-student", component: NotFoundComponent },
+      { path: "review-requests", component: NotFoundComponent },
     ]
   },
   { path: "", component: AutomasionComponent },
