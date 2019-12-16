@@ -22,29 +22,29 @@
       <ng-container *ngIf="!currentUser.admin; else adminLinks">
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="new-request"
           routerLinkActive="active">
-          <i class="fal fa-file-plus ml-1"></i> درخواست جدید
+          <i class="fal fa-file-plus ml-2"></i> درخواست جدید
         </a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="requests"
           routerLinkActive="active">
-          <i class="fal fa-file-alt ml-1"></i> درخواست های جاری
+          <i class="fal fa-table ml-2"></i> درخواست های جاری
         </a>
       </ng-container>
       <ng-template #adminLinks>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="students"
           routerLinkActive="active">
-          <i class="fal fa-users ml-1"></i> دانشجو ها
+          <i class="fal fa-users ml-2"></i> دانشجو ها
         </a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="review-requests"
           routerLinkActive="active">
-          <i class="fal fa-file-alt ml-1"></i> درخواست ها
+          <i class="fal fa-table ml-2"></i> درخواست ها
         </a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="new-student"
           routerLinkActive="active">
-          <i class="fal fa-user-edit ml-1"></i> ثبت اطلاعت دانشجو
+          <i class="fal fa-user-edit ml-2"></i> ثبت اطلاعت دانشجو
         </a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="signup-requests"
           routerLinkActive="active">
-          <i class="fal fa-user-plus ml-1"></i> درخواست های ثبت نام
+          <i class="fal fa-user-plus ml-2"></i> درخواست های ثبت نام
         </a>
       </ng-template>
     </mat-nav-list>
