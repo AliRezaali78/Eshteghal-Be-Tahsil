@@ -14,6 +14,7 @@ import { AdminGuard } from './services/guards/admin-guard.service';
 import { StudentsComponent } from './main/admin/students/students.component';
 import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
 import { NewStudentComponent } from './main/admin/new-student/new-student.component';
+import { SignupRequestsComponent } from './main/admin/signup-requests/signup-requests.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,8 @@ const routes: Routes = [
       { path: "students", component: StudentsComponent, canActivate: [AdminGuard] },
       { path: "new-student", component: NewStudentComponent, canActivate: [AdminGuard] },
       { path: "review-requests", component: ReviewRequestsComponent, canActivate: [AdminGuard] },
+      { path: "signup-requests", component: SignupRequestsComponent, canActivate: [AdminGuard] },
+
 
       { path: "not-found", component: NotFoundComponent },
 

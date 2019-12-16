@@ -33,6 +33,7 @@ import { TableSpinnerComponent } from './table-spinner/table-spinner.component';
 import { NewStudentComponent } from './main/admin/new-student/new-student.component';
 import { StudentsComponent } from './main/admin/students/students.component';
 import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
+import { SignupRequestsComponent } from './main/admin/signup-requests/signup-requests.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { ReviewRequestsComponent } from './main/admin/review-requests/review-req
     NewStudentComponent,
     StudentsComponent,
     ReviewRequestsComponent,
+    SignupRequestsComponent,
   ],
   imports: [
     BrowserModule,

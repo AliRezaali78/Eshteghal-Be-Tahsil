@@ -30,10 +30,6 @@
         </a>
       </ng-container>
       <ng-template #adminLinks>
-        <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="new-student"
-          routerLinkActive="active">
-          <i class="fal fa-user-edit ml-1"></i> ثبت اطلاعت دانشجو
-        </a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="students"
           routerLinkActive="active">
           <i class="fal fa-users ml-1"></i> دانشجو ها
@@ -42,10 +38,17 @@
           routerLinkActive="active">
           <i class="fal fa-file-alt ml-1"></i> درخواست ها
         </a>
+        <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="new-student"
+          routerLinkActive="active">
+          <i class="fal fa-user-edit ml-1"></i> ثبت اطلاعت دانشجو
+        </a>
+        <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="signup-requests"
+          routerLinkActive="active">
+          <i class="fal fa-user-plus ml-1"></i> درخواست های ثبت نام
+        </a>
       </ng-template>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="content">
     <ng-content></ng-content>
   </mat-sidenav-content>
-</mat-sidenav-container>
