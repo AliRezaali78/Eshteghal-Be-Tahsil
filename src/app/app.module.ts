@@ -34,6 +34,7 @@ import { NewStudentComponent } from './main/admin/new-student/new-student.compon
 import { StudentsComponent } from './main/admin/students/students.component';
 import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
 import { SignupRequestsComponent } from './main/admin/signup-requests/signup-requests.component';
+import { ManualSignupComponent } from './main/admin/new-student/manual-signup/manual-signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +59,7 @@ import { SignupRequestsComponent } from './main/admin/signup-requests/signup-req
     StudentsComponent,
     ReviewRequestsComponent,
     SignupRequestsComponent,
+    ManualSignupComponent,
   ],
   imports: [
     BrowserModule,

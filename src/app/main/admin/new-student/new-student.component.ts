@@ -1,19 +1,21 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { SidenavService } from 'src/app/services/sidenav/sidenav.service';
 import { MatTabGroup } from '@angular/material/tabs';
-import { delay } from 'rxjs/operators';
 import { Title } from '@angular/platform-browser';
+import { Subscription } from 'rxjs';
+import { delay } from 'rxjs/operators';
+import { SidenavService } from 'src/app/services/sidenav/sidenav.service';
+
 @Component({
   selector: 'new-student',
   templateUrl: './new-student.component.html',
-  styleUrls: ['./new-student.component.scss']
+  styleUrls: ['./new-student.component.scss'],
 })
 export class NewStudentComponent implements OnInit {
   @ViewChild('tabs', { static: true }) tabs: MatTabGroup;
+
   subs: Subscription;
   constructor(private sidenav: SidenavService, private titleService: Title) {
-    titleService.setTitle('ثبت اطلاعات دانشجو')
+    titleService.setTitle('ثبت اطلاعات دانشجو');
   }
 
   ngOnInit() {
@@ -21,5 +23,7 @@ export class NewStudentComponent implements OnInit {
       this.tabs.realignInkBar();
     })
   }
+
+
 
 }
