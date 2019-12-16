@@ -25,7 +25,6 @@ export class MainNavComponent implements OnInit, OnDestroy {
     private authService: AuthService,
     private sideNavService: SidenavService,
     private router: Router) {
-
   }
 
   ngOnInit() {

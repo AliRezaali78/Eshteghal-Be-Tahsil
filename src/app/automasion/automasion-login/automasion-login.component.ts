@@ -1,3 +1,4 @@
+import { NavigationBarService } from './../../services/navigation-bar.service';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { FormGroup } from '@angular/forms';
@@ -14,7 +15,7 @@ export class AutomasionLoginComponent implements OnInit {
   hide = true;
   loading = false;
   invalidLogin: boolean = false;
-  constructor(private authService: AuthService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private authService: AuthService, private router: Router, private route: ActivatedRoute, private serviceBar: NavigationBarService) { }
 
   ngOnInit() {
   }
@@ -26,15 +27,18 @@ export class AutomasionLoginComponent implements OnInit {
 
   signIn(form: FormGroup) {
     this.loading = true;
+    this.serviceBar.start();
     let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl');
     this.authService.login(form.value).subscribe(result => {
       this.loading = false;
+      this.serviceBar.end();
       if (result) {
         this.invalidLogin = false;
-        this.router.navigate([returnUrl || '/main/profile']);
+        this.router.navigate([returnUrl || '/main']);
       } else this.invalidLogin = true;
     }, (error: AppError) => {
       this.loading = false;
+      this.serviceBar.end();
       this.handleError(error);
     });
   }
