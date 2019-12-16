@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NationalCodeValidators } from 'src/app/common/validators/national-code.validators';
 import { NumberValidators } from 'src/app/common/validators/number.validators';
 
 import { fadeInOutCustom } from './../../common/animations/fade.animation';
+import { MajorsService } from 'src/app/services/majors.service';
 
 @Component({
   selector: 'automasion-register',
@@ -14,18 +15,21 @@ import { fadeInOutCustom } from './../../common/animations/fade.animation';
   ],
   providers: [NationalCodeValidators]
 })
-export class AutomasionRegisterComponent {
+export class AutomasionRegisterComponent implements OnInit {
   form: FormGroup;
   sk = "6LduRcQUAAAAAJW6-ot5RJBEt-5IfsSevCFxfbev";
   loading = false;
   success = false;
   invalidRegister = false;
-  majors = [
-    { id: 1, value: "کامپیوتر - نرم افزار کامپیوتر" },
-    { id: 2, value: "الکترونیک" },
-    { id: 3, value: "برق" },
-  ]
-  constructor(private fb: FormBuilder, private nationalCodeValidators: NationalCodeValidators) {
+  majors = [];
+  constructor(
+    private fb: FormBuilder,
+    private nationalCodeValidators: NationalCodeValidators,
+    private majorService: MajorsService) {
+  }
+
+  ngOnInit() {
+    this.majors.push(...this.majorService.getMajors());
     this.form = this.createForm();
   }
 

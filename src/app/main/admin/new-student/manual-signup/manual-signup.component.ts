@@ -12,11 +12,7 @@ import { NumberValidators } from 'src/app/common/validators/number.validators';
 })
 export class ManualSignupComponent implements OnInit {
   form;
-  majors = [
-    { id: 1, value: "کامپیوتر - نرم افزار کامپیوتر" },
-    { id: 2, value: "الکترونیک" },
-    { id: 3, value: "برق" },
-  ]
+
   constructor(private fb: FormBuilder, private nationalCodeValidators: NationalCodeValidators) { }
 
   ngOnInit() {
