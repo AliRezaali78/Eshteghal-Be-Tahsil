@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-main',
@@ -11,7 +12,8 @@ export class MainComponent implements OnInit, OnDestroy {
   showBackImage = false;
   sub: Subscription;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private titleService: Title) {
+    titleService.setTitle('اشتغال به تحصیل - پنل کاربری')
   }
 
   ngOnInit() {

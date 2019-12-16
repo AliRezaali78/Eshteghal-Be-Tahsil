@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fadeIn } from '../common/animations/fade.animation';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'not-found',
@@ -11,7 +12,9 @@ import { fadeIn } from '../common/animations/fade.animation';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) {
+    titleService.setTitle('چیزی یافت نشد 404')
+  }
 
   ngOnInit() {
   }

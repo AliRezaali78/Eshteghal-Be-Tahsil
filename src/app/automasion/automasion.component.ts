@@ -11,7 +11,7 @@ export class AutomasionComponent implements OnInit {
   constructor(private titleService: Title) { }
 
   ngOnInit() {
-    this.titleService.setTitle('اتوماسیون')
+    this.titleService.setTitle(this.title)
   }
 
 

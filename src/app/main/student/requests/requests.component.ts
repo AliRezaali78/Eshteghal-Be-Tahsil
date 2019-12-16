@@ -4,6 +4,7 @@ import { fadeIn } from './../../../common/animations/fade.animation';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-requests',
@@ -27,7 +28,9 @@ export class RequestsComponent implements OnInit {
     { id: 7, option: 'سازمان', to: 'سازمان تست', status: '3' },
     { id: 8, option: 'سازمان', to: 'سازمان تست', status: '3' },
   ];
-  constructor() { }
+  constructor(private titleService: Title) {
+    titleService.setTitle('درخواست های جاری')
+  }
 
 
   ngOnInit() {

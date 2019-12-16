@@ -5,6 +5,7 @@ import { SidenavService } from '../../services/sidenav/sidenav.service';
 import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import { MatTabGroup } from '@angular/material/tabs';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'profile',
@@ -15,7 +16,8 @@ import { MatTabGroup } from '@angular/material/tabs';
 export class ProfileComponent implements OnInit, OnDestroy {
   @ViewChild('tabs', { static: true }) tabs: MatTabGroup;
   subs: Subscription;
-  constructor(private auth: AuthService, private sidenav: SidenavService) {
+  constructor(private auth: AuthService, private sidenav: SidenavService, private titleService: Title) {
+    titleService.setTitle('پروفایل کاربری')
   }
 
   ngOnInit() {

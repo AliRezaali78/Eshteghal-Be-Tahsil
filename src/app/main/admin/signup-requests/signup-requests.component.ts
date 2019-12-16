@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'signup-requests',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupRequestsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) {
+    titleService.setTitle('برسی درخواست های ثبت نام')
+  }
 
   ngOnInit() {
   }
