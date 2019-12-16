@@ -24,7 +24,7 @@ import { ProfileInformationComponent } from './main/profile/profile-information/
 import { ProfileComponent } from './main/profile/profile.component';
 import { NewRequestComponent } from './main/student/new-request/new-request.component';
 import { RequestsComponent } from './main/student/requests/requests.component';
-import { MaterialsModule } from './materials-module/materials.module';
+import { MaterialsModule } from './common/modules/materials.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthInterceptor } from './services/auth.interceptor.service';
 import { PersianNumberService } from './services/persian-services/persian-number.service';
