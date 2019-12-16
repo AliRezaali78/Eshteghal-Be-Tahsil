@@ -30,6 +30,9 @@ import { AuthInterceptor } from './services/auth.interceptor.service';
 import { PersianNumberService } from './services/persian-services/persian-number.service';
 import { ShowRequestComponent } from './main/student/show-request/show-request.component';
 import { TableSpinnerComponent } from './table-spinner/table-spinner.component';
+import { NewStudentComponent } from './main/admin/new-student/new-student.component';
+import { StudentsComponent } from './main/admin/students/students.component';
+import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,9 @@ import { TableSpinnerComponent } from './table-spinner/table-spinner.component';
     PersianNumberPipe,
     ShowRequestComponent,
     TableSpinnerComponent,
+    NewStudentComponent,
+    StudentsComponent,
+    ReviewRequestsComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,9 @@ import { ProfileComponent } from './main/profile/profile.component';
 import { ShowRequestComponent } from './main/student/show-request/show-request.component';
 import { StudentGuard } from './services/guards/student-guard.service';
 import { AdminGuard } from './services/guards/admin-guard.service';
+import { StudentsComponent } from './main/admin/students/students.component';
+import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
+import { NewStudentComponent } from './main/admin/new-student/new-student.component';
 
 const routes: Routes = [
   {
@@ -21,9 +24,9 @@ const routes: Routes = [
       { path: "requests/:id", component: ShowRequestComponent, canActivate: [StudentGuard] },
       { path: "requests", component: RequestsComponent, canActivate: [StudentGuard] },
 
-      { path: "students", component: NotFoundComponent, canActivate: [AdminGuard] },
-      { path: "new-student", component: NotFoundComponent, canActivate: [AdminGuard] },
-      { path: "review-requests", component: NotFoundComponent, canActivate: [AdminGuard] },
+      { path: "students", component: StudentsComponent, canActivate: [AdminGuard] },
+      { path: "new-student", component: NewStudentComponent, canActivate: [AdminGuard] },
+      { path: "review-requests", component: ReviewRequestsComponent, canActivate: [AdminGuard] },
 
       { path: "not-found", component: NotFoundComponent },
 
