@@ -22,11 +22,11 @@
       <ng-container *ngIf="!currentUser.admin; else adminLinks">
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="new-request"
           routerLinkActive="active">
-          درخواست جدید
+          <i class="fal fa-file-plus ml-1"></i> درخواست جدید
         </a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="requests"
           routerLinkActive="active">
-          درخواست های جاری
+          <i class="fal fa-file-alt ml-1"></i> درخواست های جاری
         </a>
       </ng-container>
       <ng-template #adminLinks>
@@ -40,7 +40,7 @@
         </a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="review-requests"
           routerLinkActive="active">
-          <i class="fal fa-envelope ml-1"></i> درخواست ها
+          <i class="fal fa-file-alt ml-1"></i> درخواست ها
         </a>
       </ng-template>
     </mat-nav-list>
