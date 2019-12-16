@@ -33,7 +33,6 @@ import { TableSpinnerComponent } from './table-spinner/table-spinner.component';
 import { NewStudentComponent } from './main/admin/new-student/new-student.component';
 import { StudentsComponent } from './main/admin/students/students.component';
 import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
-import { FontAwesomeIconsModule } from './common/modules/font-awesome-icons.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +67,6 @@ import { FontAwesomeIconsModule } from './common/modules/font-awesome-icons.modu
     CustomFormsModule,
     RecaptchaFormsModule, RecaptchaModule,
     HttpClientModule,
-    FontAwesomeIconsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter

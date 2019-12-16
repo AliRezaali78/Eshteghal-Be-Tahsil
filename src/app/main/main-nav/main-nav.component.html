@@ -1,6 +1,6 @@
 <mat-toolbar class="nav full-shadow" dir="rtl" color="accent">
   <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggleSideNav()">
-    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    <mat-icon fontIcon="fa-bars" class="fal"></mat-icon>
   </button>
   <span id="logo">اشتغال به تحصیل</span>
   <div style="flex: 1 1 auto"></div>
@@ -31,15 +31,15 @@
       <ng-template #adminLinks>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="new-student"
           routerLinkActive="active">
-          ثبت اطلاعت دانشجو
+          <i class="fal fa-user-edit ml-1"></i> ثبت اطلاعت دانشجو
         </a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="students"
           routerLinkActive="active">
-          دانشجو ها
+          <i class="fal fa-users ml-1"></i> دانشجو ها
         </a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="review-requests"
           routerLinkActive="active">
-          درخواست ها
+          <i class="fal fa-envelope ml-1"></i> درخواست ها
         </a>
       </ng-template>
     </mat-nav-list>
