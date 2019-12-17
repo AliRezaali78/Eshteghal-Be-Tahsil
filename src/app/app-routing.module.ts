@@ -13,8 +13,8 @@ import { StudentGuard } from './services/guards/student-guard.service';
 import { AdminGuard } from './services/guards/admin-guard.service';
 import { StudentsComponent } from './main/admin/students/students.component';
 import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
-import { NewStudentComponent } from './main/admin/new-student/new-student.component';
 import { SignupRequestsComponent } from './main/admin/signup-requests/signup-requests.component';
+import { StudentFormComponent } from './main/admin/new-student/student-form.component';
 
 const routes: Routes = [
   {
@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: "requests", component: RequestsComponent, canActivate: [StudentGuard] },
 
       { path: "students", component: StudentsComponent, canActivate: [AdminGuard] },
-      { path: "new-student", component: NewStudentComponent, canActivate: [AdminGuard] },
+      { path: "student-form", component: StudentFormComponent, canActivate: [AdminGuard] },
       { path: "review-requests", component: ReviewRequestsComponent, canActivate: [AdminGuard] },
       { path: "signup-requests", component: SignupRequestsComponent, canActivate: [AdminGuard] },
 

@@ -6,11 +6,11 @@ import { delay } from 'rxjs/operators';
 import { SidenavService } from 'src/app/services/sidenav/sidenav.service';
 
 @Component({
-  selector: 'new-student',
-  templateUrl: './new-student.component.html',
-  styleUrls: ['./new-student.component.scss'],
+  selector: 'student-form',
+  templateUrl: './student-form.component.html',
+  styleUrls: ['./student-form.component.scss'],
 })
-export class NewStudentComponent implements OnInit {
+export class StudentFormComponent implements OnInit {
   @ViewChild('tabs', { static: true }) tabs: MatTabGroup;
 
   subs: Subscription;
