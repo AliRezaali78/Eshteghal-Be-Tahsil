@@ -33,8 +33,8 @@ import { TableSpinnerComponent } from './table-spinner/table-spinner.component';
 import { StudentsComponent } from './main/admin/students/students.component';
 import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
 import { SignupRequestsComponent } from './main/admin/signup-requests/signup-requests.component';
-import { ManualSignupComponent } from './main/admin/new-student/manual-signup/manual-signup.component';
-import { StudentFormComponent } from './main/admin/new-student/student-form.component';
+import { ManualSignupComponent } from './main/admin/student-form/manual-signup/manual-signup.component';
+import { StudentFormComponent } from './main/admin/student-form/student-form.component';
 @NgModule({
   declarations: [
     AppComponent,

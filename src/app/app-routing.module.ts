@@ -14,7 +14,7 @@ import { AdminGuard } from './services/guards/admin-guard.service';
 import { StudentsComponent } from './main/admin/students/students.component';
 import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
 import { SignupRequestsComponent } from './main/admin/signup-requests/signup-requests.component';
-import { StudentFormComponent } from './main/admin/new-student/student-form.component';
+import { StudentFormComponent } from './main/admin/student-form/student-form.component';
 
 const routes: Routes = [
   {
