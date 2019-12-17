@@ -14,6 +14,7 @@ import { MajorsService } from 'src/app/services/majors.service';
 export class ManualSignupComponent implements OnInit {
   form;
   majors = [];
+  loading = false;
   constructor(
     private fb: FormBuilder,
     private nationalCodeValidators: NationalCodeValidators,
@@ -39,5 +40,10 @@ export class ManualSignupComponent implements OnInit {
       level: ['', Validators.required],
       type: ['', Validators.required],
     });
+  }
+
+  register() {
+    console.log(this.form.value);
+    this.loading = true;
   }
 }
