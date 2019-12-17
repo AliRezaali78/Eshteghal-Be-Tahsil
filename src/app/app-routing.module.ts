@@ -26,6 +26,7 @@ const routes: Routes = [
       { path: "requests", component: RequestsComponent, canActivate: [StudentGuard] },
 
       { path: "students", component: StudentsComponent, canActivate: [AdminGuard] },
+      { path: "student-form/:id", component: StudentFormComponent, canActivate: [AdminGuard] },
       { path: "student-form", component: StudentFormComponent, canActivate: [AdminGuard] },
       { path: "review-requests", component: ReviewRequestsComponent, canActivate: [AdminGuard] },
       { path: "signup-requests", component: SignupRequestsComponent, canActivate: [AdminGuard] },

@@ -1,8 +1,10 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { NationalCodeValidators } from 'src/app/common/validators/national-code.validators';
 import { NumberValidators } from 'src/app/common/validators/number.validators';
 import { MajorsService } from 'src/app/services/majors.service';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'manual-signup',
@@ -12,18 +14,35 @@ import { MajorsService } from 'src/app/services/majors.service';
 
 })
 export class ManualSignupComponent implements OnInit {
-  form;
+  form: FormGroup;
   majors = [];
   loading = false;
   constructor(
     private fb: FormBuilder,
     private nationalCodeValidators: NationalCodeValidators,
-    private majrosService: MajorsService
+    private majorsService: MajorsService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.form = this.createForm();
-    this.majors.push(...this.majrosService.getMajors());
+    this.majors.push(...this.majorsService.getMajors());
+    let id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      let user: User = {
+        startDate: '96-97',
+        startDateOption: 'نیمسال دوم تحصیلی',
+        father: 'احمد',
+        name: 'علی',
+        lastname: 'رضاعلی',
+        level: 'کاردانی',
+        major: 'الکترونیک',
+        nationalCode: '0000000000',
+        studentCode: '11111111111111',
+        type: 'شبانه'
+      };
+      this.form.patchValue(user);
+    }
   }
   createForm() {
     return this.fb.group({

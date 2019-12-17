@@ -2,11 +2,12 @@ export interface User {
     name: string;
     lastname: string;
     father: string;
-    studentCode: number;
-    nationalCode: number;
+    studentCode: string;
+    nationalCode: string;
     major: string;
-    dateStart: string;
+    startDate: string;
     level: string;
     type: string;
-    admin: boolean;
+    startDateOption: string;
+    admin?: boolean;
 }

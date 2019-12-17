@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTabGroup } from '@angular/material/tabs';
 import { Title } from '@angular/platform-browser';
@@ -12,9 +13,9 @@ import { SidenavService } from 'src/app/services/sidenav/sidenav.service';
 })
 export class StudentFormComponent implements OnInit {
   @ViewChild('tabs', { static: true }) tabs: MatTabGroup;
-
+  tabText = "ثبت"
   subs: Subscription;
-  constructor(private sidenav: SidenavService, private titleService: Title) {
+  constructor(private sidenav: SidenavService, private titleService: Title, private route: ActivatedRoute) {
     titleService.setTitle('ثبت اطلاعات دانشجو');
   }
 
@@ -22,6 +23,8 @@ export class StudentFormComponent implements OnInit {
     this.subs = this.sidenav.switch.pipe(delay(500)).subscribe(() => {
       this.tabs.realignInkBar();
     })
+    let id = this.route.snapshot.paramMap.get('id');
+    if (id) this.tabText = 'ویرایش';
   }
 
 
