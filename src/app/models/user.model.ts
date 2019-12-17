@@ -10,8 +10,8 @@ export class User {
     startDateOption: string;
     level: string;
     type: string;
+    joinDate?: string;
     admin?: boolean;
-
     constructor(init?: Partial<User>) {
         Object.assign(this, init);
     }
