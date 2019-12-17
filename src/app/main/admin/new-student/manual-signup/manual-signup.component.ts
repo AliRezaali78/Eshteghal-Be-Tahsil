@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { NationalCodeValidators } from 'src/app/common/validators/national-code.validators';
 import { NumberValidators } from 'src/app/common/validators/number.validators';
+import { MajorsService } from 'src/app/services/majors.service';
 
 @Component({
   selector: 'manual-signup',
@@ -12,10 +13,16 @@ import { NumberValidators } from 'src/app/common/validators/number.validators';
 })
 export class ManualSignupComponent implements OnInit {
   form;
-
-  constructor(private fb: FormBuilder, private nationalCodeValidators: NationalCodeValidators) { }
+  majors = [];
+  constructor(
+    private fb: FormBuilder,
+    private nationalCodeValidators: NationalCodeValidators,
+    private majrosService: MajorsService
+  ) { }
 
   ngOnInit() {
+    this.form = this.createForm();
+    this.majors.push(...this.majrosService.getMajors());
   }
   createForm() {
     return this.fb.group({
