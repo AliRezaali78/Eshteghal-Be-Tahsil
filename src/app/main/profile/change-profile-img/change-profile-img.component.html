@@ -1,12 +1,7 @@
 <form [formGroup]="form" class="pt-4 pb-2" (ngSubmit)="uploadImage()">
-  <input #imageFile (change)="onImageChanged()" type="file" class="d-none">
-  <mat-form-field class="ml-3" (click)="imageFile.click();">
-    <mat-icon fontIcon="fa-upload" class="fad" matSuffix></mat-icon>
-    <input matInput formControlName="inputFile" placeholder="عکس">
-    <mat-hint> فرمت : .jpg | .jpeg | .png </mat-hint>
-    <mat-error *ngIf="inputFile.errors?.required ">عکس کاربری الزام می باشد</mat-error>
-    <mat-error *ngIf="inputFile.errors?.isNotImage ">فرمت عکس مناسب نمی باشد</mat-error>
-  </mat-form-field>
+  <input-file [control]="inputFile" [regex]="regexPattern" placeholder="عکس" hint="فرمت : .jpg | .jpeg | .png"
+    isNotValidFileError="فرمت فایل مناسب نمی باشد" (fileChanged)="onImageChanged($event)">
+  </input-file>
   <button mat-raised-button color="primary" [disabled]="!form.valid || !validFile || uploading">
     <span *ngIf="!uploading; else spinner">آپلود عکس</span>
     <ng-template #spinner>

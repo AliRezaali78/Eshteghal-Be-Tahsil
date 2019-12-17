@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { MatProgressBar } from '@angular/material';
+import { FileChangedEventArgs } from 'src/app/input-file/input-file.component';
 
 @Component({
   selector: 'change-profile-img',
@@ -14,6 +15,8 @@ export class ChangeProfileImgComponent {
   validFile = false;
   file: File;
   uploading: boolean;
+  regexPattern = "(.*?)\.(jpg|png|jpeg)$";
+
   constructor(fb: FormBuilder) {
     this.form = fb.group({
       inputFile: ['']
@@ -24,12 +27,9 @@ export class ChangeProfileImgComponent {
     return this.form.get('inputFile') as FormControl;
   }
 
-  onImageChanged() {
-    this.file = this.imageFile.nativeElement.files[0] as File;
-    if (!this.file) return;
-    this.inputFile.setValue(this.file.name);
-    if (!this.isimage(this.file)) return;
-    this.validFile = true;
+  onImageChanged($event: FileChangedEventArgs) {
+    this.file = $event.file;
+    this.validFile = $event.valid;
   }
 
   uploadImage() {
@@ -49,11 +49,4 @@ export class ChangeProfileImgComponent {
     //when uploaded call profile service subject.next() to inform profile image to change
   }
 
-  isimage(file: File) {
-    let regex = new RegExp("(.*?)\.(jpg|png|jpeg)$");
-    let valid = regex.test(file.type);
-    if (!valid)
-      this.inputFile.setErrors({ isNotImage: true });
-    return valid;
-  }
 }

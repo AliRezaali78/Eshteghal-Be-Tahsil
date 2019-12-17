@@ -1,12 +1,7 @@
 <form [formGroup]="form" class="pt-4 pb-2 text-right mb-4" (ngSubmit)="show()">
-    <input #excelFile (change)="onExcelChanged()" type="file" class="d-none">
-    <mat-form-field class="ml-3" (click)="excelFile.click();">
-        <mat-icon fontIcon="fa-upload" class="fad" matSuffix></mat-icon>
-        <input matInput formControlName="inputFile" placeholder="فایل Excel">
-        <mat-hint> فرمت : .xlsx </mat-hint>
-        <mat-error *ngIf="inputFile.errors?.required ">فایل اکسل الزام می باشد</mat-error>
-        <mat-error *ngIf="inputFile.errors?.isNotExcel ">فرمت فایل مناسب نمی باشد</mat-error>
-    </mat-form-field>
+    <input-file [control]="inputFile" [regex]="regexPattern" placeholder="فایل Excel" hint="فرمت : .xlsx"
+        isNotValidFileError="فرمت فایل مناسب نمی باشد" (fileChanged)="onExcelChanged($event)">
+    </input-file>
     <button mat-raised-button color="primary" [disabled]="!form.valid || !validFile || uploading">
         <span *ngIf="!uploading; else spinner">نمایش</span>
         <ng-template #spinner>

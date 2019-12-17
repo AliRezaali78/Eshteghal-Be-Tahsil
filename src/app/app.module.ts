@@ -36,6 +36,7 @@ import { SignupRequestsComponent } from './main/admin/signup-requests/signup-req
 import { ManualSignupComponent } from './main/admin/student-form/manual-signup/manual-signup.component';
 import { StudentFormComponent } from './main/admin/student-form/student-form.component';
 import { ExcelSignupComponent } from './main/admin/student-form/excel-signup/excel-signup.component';
+import { InputFileComponent } from './input-file/input-file.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +63,7 @@ import { ExcelSignupComponent } from './main/admin/student-form/excel-signup/exc
     SignupRequestsComponent,
     ManualSignupComponent,
     ExcelSignupComponent,
+    InputFileComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,7 @@
+<input #fileInput (change)="onChanged()" type="file" class="d-none">
+<mat-form-field class="ml-3" (click)="fileInput.click();">
+    <mat-icon fontIcon="fa-upload" class="fad" matSuffix></mat-icon>
+    <input matInput [formControl]="control" [placeholder]="placeholder">
+    <mat-hint> {{ hint }} </mat-hint>
+    <mat-error *ngIf="control.errors?.isNotValidFile ">{{ isNotValidFileError }}</mat-error>
+</mat-form-field>
