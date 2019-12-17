@@ -17,7 +17,8 @@ export class NumberValidators {
             return { NAN: true };
         if (value.indexOf('-') === -1)
             return { NAN: true };
-
+        if (value.substr(value.indexOf('-') + 1) === '')
+            return { NAN: true };
         return null;
     }
 }
