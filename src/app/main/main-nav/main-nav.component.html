@@ -19,7 +19,10 @@
     fixedTopGap="60" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <mat-nav-list>
-      <ng-container *ngIf="!currentUser.admin; else adminLinks">
+      <!-- *ngIf="!currentUser.admin; else adminLinks" -->
+      <ng-container>
+        <a mat-list-item disableRipple="true" class="mat-bg-accent title" style="color: yellow !important;">بخش
+          دانشجویان</a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="new-request"
           routerLinkActive="active">
           <i class="fal fa-file-plus ml-2"></i> درخواست جدید
@@ -29,7 +32,9 @@
           <i class="fal fa-table ml-2"></i> درخواست های جاری
         </a>
       </ng-container>
-      <ng-template #adminLinks>
+      <ng-container #adminLinks>
+        <a mat-list-item disableRipple="true" class="mat-bg-accent title" style="color: yellow !important;">بخش
+          ادمین</a>
         <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="students"
           routerLinkActive="active">
           <i class="fal fa-users ml-2"></i> دانشجو ها
@@ -46,7 +51,7 @@
           routerLinkActive="active">
           <i class="fal fa-user-plus ml-2"></i> درخواست های ثبت نام
         </a>
-      </ng-template>
+      </ng-container>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="content">

@@ -38,7 +38,9 @@ $active-backgroundColor: #01171e;
 mat-nav-list a{
   color: #ffffff !important;
 }
-
+a.title:hover{
+  cursor: auto !important;
+}
 .active{
   border-left: 3.5px solid $accent-color !important;
   background-color: $active-backgroundColor !important;

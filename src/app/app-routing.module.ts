@@ -21,9 +21,9 @@ const routes: Routes = [
     path: "main", component: MainComponent, canActivate: [AuthGuard], children: [
       { path: "profile", component: ProfileComponent },
 
-      { path: "new-request", component: NewRequestComponent, canActivate: [StudentGuard] },
-      { path: "requests/:id", component: ShowRequestComponent, canActivate: [StudentGuard] },
-      { path: "requests", component: RequestsComponent, canActivate: [StudentGuard] },
+      { path: "new-request", component: NewRequestComponent, canActivate: [] },
+      { path: "requests/:id", component: ShowRequestComponent, canActivate: [] },
+      { path: "requests", component: RequestsComponent, canActivate: [] },
 
       { path: "students", component: StudentsComponent, canActivate: [AdminGuard] },
       { path: "student-form/:id", component: StudentFormComponent, canActivate: [AdminGuard] },
