@@ -17,6 +17,7 @@ export class ManualSignupComponent implements OnInit {
   form: FormGroup;
   majors = [];
   loading = false;
+  invalidRegister = false;
   constructor(
     private fb: FormBuilder,
     private nationalCodeValidators: NationalCodeValidators,
