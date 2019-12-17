@@ -1,3 +1,4 @@
+import { fadeIn } from './../../../common/animations/fade.animation';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTabGroup } from '@angular/material/tabs';
@@ -10,6 +11,7 @@ import { SidenavService } from 'src/app/services/sidenav/sidenav.service';
   selector: 'student-form',
   templateUrl: './student-form.component.html',
   styleUrls: ['./student-form.component.scss'],
+  animations: [fadeIn]
 })
 export class StudentFormComponent implements OnInit {
   @ViewChild('tabs', { static: true }) tabs: MatTabGroup;
