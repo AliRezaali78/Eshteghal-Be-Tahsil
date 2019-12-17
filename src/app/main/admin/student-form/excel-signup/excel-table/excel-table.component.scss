@@ -1,0 +1,21 @@
+
+th{
+    font-size: 110% !important;
+    padding: 10px !important;
+}
+td{
+    padding-right: 10px !important;
+}
+#table{
+    width: 100%;
+}
+
+@media screen AND (max-width: 1024px){
+    #table{
+        width: 1124px !important;
+    }
+    #paginator{
+        width: 1124px !important;
+    }
+}
+

@@ -1,9 +1,12 @@
-<form [formGroup]="form" class="pt-4 pb-2 text-right mb-4" (ngSubmit)="show()">
+<form dir="rtl" [formGroup]="form" class="pt-4 pb-2 text-right mb-4" (ngSubmit)="show()">
     <input-file [control]="inputFile" [regex]="regexPattern" placeholder="فایل Excel" hint="فرمت : .xlsx"
         isNotValidFileError="فرمت فایل مناسب نمی باشد" (fileChanged)="onExcelChanged($event)">
     </input-file>
+    <button class="ml-3" mat-raised-button color="primary" [disabled]="!form.valid || !validFile || uploading">
+        نمایش
+    </button>
     <button mat-raised-button color="primary" [disabled]="!form.valid || !validFile || uploading">
-        <span *ngIf="!uploading; else spinner">نمایش</span>
+        <span *ngIf="!uploading; else spinner">ثبت</span>
         <ng-template #spinner>
             <b4-spinner></b4-spinner>
         </ng-template>
@@ -14,18 +17,4 @@
     </div>
 </form>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>نام</th>
-            <th>نام خانوادگی</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let user of users">
-            <td>{{ user.name }}</td>
-            <td>{{ user.lastname }}</td>
-
-        </tr>
-    </tbody>
-</table>
+<excel-table #userTable [users]="users"></excel-table>

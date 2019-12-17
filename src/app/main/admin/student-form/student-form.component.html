@@ -1,21 +1,22 @@
 <mat-card>
     <mat-card-content>
-        <mat-tab-group #tabs dynamicHeight dir="rtl">
+        <mat-tab-group mat-align-tabs="end" #tabs dynamicHeight>
             <mat-tab>
                 <ng-template mat-tab-label>
-                    <i class="fad fa-pen ml-2"></i>
-                    {{ tabText }}
-                    اطلاعات دانشجو
-                </ng-template>
-                <manual-signup></manual-signup>
-            </mat-tab>
-            <mat-tab>
-                <ng-template mat-tab-label>
+                    Excel ثبت از طریق فایل
                     <i class="fad fa-file-excel ml-2" style="color: green;"></i>
-                    ثبت از طریق فایل Excel
                 </ng-template>
                 <excel-signup></excel-signup>
             </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    {{ tabText }}
+                    اطلاعات دانشجو
+                    <i class="fad fa-pen ml-2"></i>
+                </ng-template>
+                <manual-signup></manual-signup>
+            </mat-tab>
+
         </mat-tab-group>
     </mat-card-content>
 </mat-card>

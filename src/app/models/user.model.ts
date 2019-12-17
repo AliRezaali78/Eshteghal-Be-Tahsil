@@ -1,4 +1,5 @@
 export class User {
+    id: number;
     name: string;
     lastname: string;
     father: string;
@@ -6,9 +7,9 @@ export class User {
     nationalCode: string;
     major: string;
     startDate: string;
+    startDateOption: string;
     level: string;
     type: string;
-    startDateOption: string;
     admin?: boolean;
 
     constructor(init?: Partial<User>) {
