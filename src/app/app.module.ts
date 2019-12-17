@@ -35,6 +35,7 @@ import { ReviewRequestsComponent } from './main/admin/review-requests/review-req
 import { SignupRequestsComponent } from './main/admin/signup-requests/signup-requests.component';
 import { ManualSignupComponent } from './main/admin/student-form/manual-signup/manual-signup.component';
 import { StudentFormComponent } from './main/admin/student-form/student-form.component';
+import { ExcelSignupComponent } from './main/admin/student-form/excel-signup/excel-signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +61,7 @@ import { StudentFormComponent } from './main/admin/student-form/student-form.com
     ReviewRequestsComponent,
     SignupRequestsComponent,
     ManualSignupComponent,
+    ExcelSignupComponent,
   ],
   imports: [
     BrowserModule,

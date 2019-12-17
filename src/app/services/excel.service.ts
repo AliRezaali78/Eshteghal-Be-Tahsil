@@ -12,20 +12,16 @@ export class ExcelService {
 
   constructor() { }
 
-  public exportAsJsonData(excelFile: File) {
+  public exportAsJsonData(data: string | ArrayBuffer) {
     let workBook = null;
     let jsonData = null;
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const data = reader.result;
-      workBook = XLSX.read(data, { type: 'binary' });
-      jsonData = workBook.SheetNames.reduce((initial, name) => {
-        const sheet = workBook.Sheets[name];
-        initial[name] = XLSX.utils.sheet_to_json(sheet);
-        return initial;
-      }, {});
-      return jsonData;
-    }
+    workBook = XLSX.read(data, { type: 'binary' });
+    jsonData = workBook.SheetNames.reduce((initial, name) => {
+      const sheet = workBook.Sheets[name];
+      initial[name] = XLSX.utils.sheet_to_json(sheet);
+      return initial;
+    }, {});
+    return jsonData;
   }
 
   public exportAsExcelFile(json: any[], excelFileName: string): void {

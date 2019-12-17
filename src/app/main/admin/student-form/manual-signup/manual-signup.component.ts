@@ -29,7 +29,7 @@ export class ManualSignupComponent implements OnInit {
     this.majors.push(...this.majorsService.getMajors());
     let id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      let user: User = {
+      let user = new User({
         startDate: '96-97',
         startDateOption: 'نیمسال دوم تحصیلی',
         father: 'احمد',
@@ -40,7 +40,8 @@ export class ManualSignupComponent implements OnInit {
         nationalCode: '0000000000',
         studentCode: '11111111111111',
         type: 'شبانه'
-      };
+      });
+
       this.form.patchValue(user);
     }
   }
