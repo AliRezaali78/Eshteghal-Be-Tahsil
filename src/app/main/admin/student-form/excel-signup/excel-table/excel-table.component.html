@@ -15,11 +15,11 @@
             </ng-container>
             <ng-container matColumnDef="nationalCode">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> کد ملی </th>
-                <td mat-cell *matCellDef="let row"> {{row.nationalCode}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.nationalCode | persianNumber }} </td>
             </ng-container>
             <ng-container matColumnDef="studentCode">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> شماره دانشجویی </th>
-                <td mat-cell *matCellDef="let row"> {{row.studentCode}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.studentCode | persianNumber }} </td>
             </ng-container>
             <ng-container matColumnDef="major">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> رشته تحصیلی </th>
@@ -27,7 +27,7 @@
             </ng-container>
             <ng-container matColumnDef="startDate">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> سال شروع تحصیل </th>
-                <td mat-cell *matCellDef="let row"> {{row.startDateOption}} {{row.startDate}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.startDateOption}} {{row.startDate | persianNumber }} </td>
             </ng-container>
             <ng-container matColumnDef="level">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> مقطع </th>
