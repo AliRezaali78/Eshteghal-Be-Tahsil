@@ -1,4 +1,3 @@
-$nav-height:60px;
 $side-width: 250px;
 $content-padding-top: 90px;
 $content-padding-down: 30px;
@@ -7,15 +6,8 @@ $content-padding-left: 20px;
 
 $accent-color: #0578a6;
 $active-backgroundColor: #01171e;
-.nav{
-  height: $nav-height;
-  position: fixed;
-  z-index: 2 !important;
-}
 
-.full-shadow{
-  box-shadow: 0 5px 0.4rem rgba(5, 120, 166,0.6);
-}
+
 .sidenav-container {
   height: 100%;
 }

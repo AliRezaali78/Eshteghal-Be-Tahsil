@@ -1,21 +1,6 @@
-<mat-toolbar class="nav full-shadow" dir="rtl" color="accent">
-  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="toggleSideNav()">
-    <mat-icon fontIcon="fa-bars" class="fal"></mat-icon>
-  </button>
-  <span id="vertical-bar" class="ml-2" style="color: #045577;">|</span>
-  <span id="logo">اشتغال به تحصیل</span>
-  <div style="flex: 1 1 auto"></div>
-  <button mat-button [matMenuTriggerFor]="menu">
-    <mat-icon>arrow_drop_down</mat-icon>
-    <span> {{ currentUser.name }} {{ currentUser.lastname }}</span>
-  </button>
-  <mat-menu dir="rtl" #menu="matMenu">
-    <button mat-menu-item routerLink="profile">پروفایل</button>
-    <button mat-menu-item (click)="logout()">خروج</button>
-  </mat-menu>
-</mat-toolbar>
+<navbar [user]="currentUser" [sidenavRef]="sidenav"></navbar>
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav dir="rtl" position="end" #sidenav class="sidenav custom-bg-dark-blue" fixedInViewport="true"
+  <mat-sidenav #sidenav dir="rtl" position="end" class="sidenav custom-bg-dark-blue" fixedInViewport="true"
     fixedTopGap="60" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <mat-nav-list>

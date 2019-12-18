@@ -1,0 +1,17 @@
+$nav-height:60px;
+
+.nav{
+    height: $nav-height;
+    position: fixed;
+    z-index: 2 !important;
+  }
+
+.full-shadow{
+    box-shadow: 0 5px 0.4rem rgba(5, 120, 166,0.6);
+}
+
+@media screen AND (max-width: 375px){
+    #logo{
+        font-size: 80% !important;
+    }
+}

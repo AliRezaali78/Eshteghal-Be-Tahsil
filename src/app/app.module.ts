@@ -38,6 +38,7 @@ import { StudentFormComponent } from './main/admin/student-form/student-form.com
 import { ExcelSignupComponent } from './main/admin/student-form/excel-signup/excel-signup.component';
 import { InputFileComponent } from './input-file/input-file.component';
 import { ExcelTableComponent } from './main/admin/student-form/excel-signup/excel-table/excel-table.component';
+import { NavbarComponent } from './main/main-nav/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +67,7 @@ import { ExcelTableComponent } from './main/admin/student-form/excel-signup/exce
     ExcelSignupComponent,
     InputFileComponent,
     ExcelTableComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
