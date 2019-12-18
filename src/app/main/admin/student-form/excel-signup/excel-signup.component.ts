@@ -31,6 +31,10 @@ export class ExcelSignupComponent {
     return this.form.get('inputFile') as FormControl;
   }
 
+  submit() {
+
+  }
+
   show() {
     this.serviceBar.start();
     const reader = new FileReader();
