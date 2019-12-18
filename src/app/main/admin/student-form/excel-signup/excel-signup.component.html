@@ -1,8 +1,9 @@
-<form dir="rtl" [formGroup]="form" class="pt-4 pb-2 text-right mb-4" (ngSubmit)="show()">
+<form dir="rtl" [formGroup]="form" class="pt-4 pb-2 text-right mb-4" (ngSubmit)="submit()">
     <input-file [control]="inputFile" [regex]="regexPattern" placeholder="فایل Excel" hint="فرمت : .xlsx"
         isNotValidFileError="فرمت فایل مناسب نمی باشد" (fileChanged)="onExcelChanged($event)">
     </input-file>
-    <button class="ml-3" mat-raised-button color="primary" [disabled]="!form.valid || !validFile || uploading">
+    <button type="button" class="ml-3" mat-raised-button color="primary"
+        [disabled]="!form.valid || !validFile || uploading" (click)="show()">
         نمایش
     </button>
     <button mat-raised-button color="primary" [disabled]="!form.valid || !validFile || uploading">

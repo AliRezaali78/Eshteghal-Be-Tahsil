@@ -39,6 +39,7 @@ export class ExcelSignupComponent {
       let jsonData = this.excelService.exportAsJsonData(data);
       this.mapPersianDatasToUserDatas(jsonData, this.users);
       this.userTable.setUsers(this.users);
+      this.users = [];
       this.serviceBar.end();
     };
 
