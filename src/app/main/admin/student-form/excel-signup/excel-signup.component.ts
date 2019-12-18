@@ -32,9 +32,9 @@ export class ExcelSignupComponent {
   }
 
   show() {
+    this.serviceBar.start();
     const reader = new FileReader();
     reader.onload = (event) => {
-      this.serviceBar.start();
       const data = reader.result;
       let jsonData = this.excelService.exportAsJsonData(data);
       this.mapPersianDatasToUserDatas(jsonData, this.users);
