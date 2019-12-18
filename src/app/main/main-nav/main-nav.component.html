@@ -4,37 +4,23 @@
     fixedTopGap="60" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <mat-nav-list>
-      <!-- *ngIf="!currentUser.admin; else adminLinks" -->
+      <!-- *ngIf="!currentUser.admin; else adminSection" -->
       <ng-container>
-        <a mat-list-item disableRipple="true" class="mat-bg-accent title" style="color: yellow !important;">بخش
-          دانشجویان</a>
-        <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="new-request"
-          routerLinkActive="active">
-          <i class="fal fa-file-plus ml-2"></i> درخواست جدید
+        <a mat-list-item disableRipple="true" class="mat-bg-accent title" style="color: yellow !important;">
+          بخش دانشجویان
         </a>
-        <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="requests"
-          routerLinkActive="active">
-          <i class="fal fa-table ml-2"></i> درخواست های جاری
+        <a *ngFor="let userLink of userLinks" mat-list-item disableRipple="true" matRipple
+          [matRippleColor]="rippleColor" [routerLink]="userLink.routerLink" routerLinkActive=" active">
+          <i [class]="userLink.icon"></i> {{ userLink.text }}
         </a>
       </ng-container>
-      <ng-container #adminLinks>
-        <a mat-list-item disableRipple="true" class="mat-bg-accent title" style="color: yellow !important;">بخش
-          ادمین</a>
-        <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="students"
-          routerLinkActive="active">
-          <i class="fal fa-users ml-2"></i> دانشجو ها
+      <ng-container #adminSection>
+        <a mat-list-item disableRipple="true" class="mat-bg-accent title" style="color: yellow !important;">
+          بخش ادمین
         </a>
-        <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="review-requests"
-          routerLinkActive="active">
-          <i class="fal fa-table ml-2"></i> درخواست ها
-        </a>
-        <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="student-form"
-          routerLinkActive="active">
-          <i class="fal fa-user-edit ml-2"></i> ثبت اطلاعت دانشجو
-        </a>
-        <a mat-list-item disableRipple="true" matRipple [matRippleColor]="rippleColor" routerLink="signup-requests"
-          routerLinkActive="active">
-          <i class="fal fa-user-plus ml-2"></i> درخواست های ثبت نام
+        <a *ngFor="let adminLink of adminLinks" mat-list-item disableRipple="true" matRipple
+          [matRippleColor]="rippleColor" [routerLink]="adminLink.routerLink" routerLinkActive=" active">
+          <i [class]="adminLink.icon"></i> {{ adminLink.text }}
         </a>
       </ng-container>
     </mat-nav-list>

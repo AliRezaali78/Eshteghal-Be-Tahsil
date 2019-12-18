@@ -1,3 +1,4 @@
+import { USER_LINKS, ADMIN_LINKS } from './sidebar.links';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material';
@@ -16,6 +17,9 @@ export class MainNavComponent {
   rippleColor = "#04709e61";
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(map(result => result.matches));
+
+  userLinks = USER_LINKS;
+  adminLinks = ADMIN_LINKS;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
