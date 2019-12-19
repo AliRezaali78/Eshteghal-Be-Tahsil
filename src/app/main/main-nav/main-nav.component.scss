@@ -1,4 +1,4 @@
-$side-width: 250px;
+$sidenav-width: 250px;
 $content-padding-top: 90px;
 $content-padding-down: 30px;
 $content-padding-right: 20px;
@@ -6,36 +6,43 @@ $content-padding-left: 20px;
 
 $accent-color: #0578a6;
 $active-backgroundColor: #01171e;
-
+$sidenav-text-color : #ffffff;
+$sidenav-box-shadow: -5px 0 0.4rem rgba(5, 120, 166,0.6);
+$sidenav-active-link-border: 3.5px solid $accent-color;
 
 .sidenav-container {
   height: 100%;
 }
 
 .sidenav {
-  width: $side-width;
+  width: $sidenav-width;
   border-right: 0 !important;
   border-left: 0 !important;
-  box-shadow: -5px 0 0.4rem rgba(5, 120, 166,0.6);
+  box-shadow: $sidenav-box-shadow;
 }
 
 .content{
   padding: $content-padding-top $content-padding-right $content-padding-down $content-padding-left;
   overflow: auto;
 }
+
+mat-nav-list a{
+  color: $sidenav-text-color !important;
+}
+
+.active{
+  border-left: $sidenav-active-link-border  !important;
+  background-color: $active-backgroundColor !important;
+}
+
+// hiding scroll bar of content 
 .content::-webkit-scrollbar { width: 0 !important }
 .content { overflow: -moz-scrollbars-none; }
 .element { -ms-overflow-style: none; }
 
-mat-nav-list a{
-  color: #ffffff !important;
-}
+// Demo Code title
 a.title:hover{
   cursor: auto !important;
-}
-.active{
-  border-left: 3.5px solid $accent-color !important;
-  background-color: $active-backgroundColor !important;
 }
 
 @media screen AND (max-width: 375px){
