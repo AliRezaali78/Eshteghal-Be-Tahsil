@@ -21,32 +21,32 @@ $dark-blue: mat-color($app-dark-blue);
 
 $primary-text-color: #ffffff;
 
-.mat-light-theme .mat-bg-primary{
-    background-color : $primary-color !important;
-    color: $primary-text-color !important;
+.mat-light-theme{
+    //  background
+    .mat-bg-primary{
+        background-color : $primary-color !important;
+        color: $primary-text-color !important;
+    }
+    .mat-bg-accent{
+        background-color : $accent-color !important;
+    }
+    .mat-bg-warn{
+        background-color : $warn-color !important;
+    }
+    .custom-bg-dark-blue{
+        background-color : $dark-blue !important;
+    }
+    // text
+    .mat-text-primary{
+        color :  $primary-color !important;
+    }
+    .mat-text-accent{
+        color : $accent-color !important;
+    }
+    .mat-text-warn{
+        color : $warn-color !important;
+    }
 }
-.mat-light-theme .mat-bg-accent{
-    background-color : $accent-color !important;
-}
-.mat-light-theme .mat-bg-warn{
-    background-color : $warn-color !important;
-}
-.mat-light-theme .custom-bg-dark-blue{
-    background-color : $dark-blue !important;
-}
-
-
-
-.mat-light-theme .mat-text-primary{
-    color :  $primary-color !important;
-}
-.mat-light-theme .mat-text-accent{
-    color : $accent-color !important;
-}
-.mat-light-theme .mat-text-warn{
-    color : $warn-color !important;
-}
-
 
 // Custom typography
 $app-typography: mat-typography-config(
