@@ -1,6 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="register()" style="padding:16px;">
   <mat-error *ngIf="invalidRegister" class="mat-text-warn text-right">
-    شماره دانشجویی / شماره ملی از قبل ثبت شده
+    شماره دانشجویی / شماره ملی ثبت شده است
   </mat-error>
   <div *ngIf="success" class="text-success text-right">اطالاعت شما با موفقیت ثبت شد، منتظر تایید ادمین...</div>
   <div class="pt-3">
