@@ -30,7 +30,10 @@ $sidenav-active-link-border: 3.5px solid $accent-color;
 mat-nav-list a{
   color: $sidenav-text-color !important;
 }
-
+a:hover{
+  border-left: $sidenav-active-link-border  !important;
+  background-color: $active-backgroundColor !important;
+}
 .active{
   border-left: $sidenav-active-link-border  !important;
   background-color: $active-backgroundColor !important;
@@ -44,6 +47,8 @@ mat-nav-list a{
 // Demo Code title
 a.title:hover{
   cursor: auto !important;
+  border-left: 0px  !important;
+  background-color: #04709e !important;
 }
 
 

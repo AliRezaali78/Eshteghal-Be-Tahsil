@@ -6,9 +6,6 @@
     <mat-nav-list>
       <!-- *ngIf="!currentUser.admin; else adminSection" -->
       <ng-container>
-        <a mat-list-item disableRipple="true" class="mat-bg-accent title" style="color: yellow !important;">
-          بخش دانشجویان
-        </a>
         <a *ngFor="let userLink of userLinks" mat-list-item disableRipple="true" matRipple
           [matRippleColor]="rippleColor" [routerLink]="userLink.routerLink" routerLinkActive=" active">
           <i [class]="userLink.icon"></i> {{ userLink.text }}
