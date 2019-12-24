@@ -12,6 +12,13 @@ $nav-box-shadow :  rgba(0, 0, 0, 0.5) 0px 5px 0.4rem;
     box-shadow: $nav-box-shadow;
 }
 
+#vertical-bar{
+    width: 1px;
+    height: 30px;
+    border-right: 1px solid #045577;
+    margin-right: 2px;
+}
+
 @media screen AND (max-width: 375px){
     #logo{
         font-size: 80% !important;
