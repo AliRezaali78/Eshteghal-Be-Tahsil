@@ -12,9 +12,6 @@
         </a>
       </ng-container>
       <ng-container #adminSection>
-        <a mat-list-item disableRipple="true" class="mat-bg-accent title" style="color: yellow !important;">
-          بخش ادمین
-        </a>
         <a *ngFor="let adminLink of adminLinks" mat-list-item disableRipple="true" matRipple
           [matRippleColor]="rippleColor" [routerLink]="adminLink.routerLink" routerLinkActive=" active">
           <i [class]="adminLink.icon"></i> {{ adminLink.text }}
