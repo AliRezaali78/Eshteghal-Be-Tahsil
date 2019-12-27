@@ -1,5 +1,4 @@
 export class User {
-    id: number;
     name: string;
     lastname: string;
     father: string;
@@ -10,6 +9,7 @@ export class User {
     startDateOption: string;
     level: string;
     type: string;
+    imageUrl?: string;
     joinDate?: string;
     admin?: boolean;
     constructor(init?: Partial<User>) {
