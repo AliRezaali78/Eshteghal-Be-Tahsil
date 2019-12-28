@@ -9,7 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { User } from 'src/app/models/user.model';
 import { startWith, switchMap, map, tap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { MatDialog } from '@angular/material';
-import { DeleteDialogBoxComponent } from './delete-dialog-box/delete-dialog-box.component';
+import { DeleteDialogBoxComponent } from '../delete-dialog-box/delete-dialog-box.component';
 
 @Component({
   selector: 'students',

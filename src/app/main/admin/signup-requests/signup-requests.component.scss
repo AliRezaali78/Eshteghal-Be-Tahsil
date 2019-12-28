@@ -1,0 +1,24 @@
+#table{
+    width: 100%;
+}
+th{
+    font-size: 110% !important;
+}
+
+@media screen AND (max-width: 1220px){
+    #table{
+        width: 1320px !important;
+    }
+    #paginator{
+        width: 1320px !important;
+    }
+}
+
+@media screen AND (max-width: 1024px){
+    #table{
+        width: 1124px !important;
+    }
+    #paginator{
+        width: 1124px !important;
+    }
+}
