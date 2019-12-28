@@ -40,8 +40,8 @@ import { InputFileComponent } from './input-file/input-file.component';
 import { ExcelTableComponent } from './main/admin/student-form/excel-signup/excel-table/excel-table.component';
 import { NavbarComponent } from './main/main-nav/navbar/navbar.component';
 import { DeleteDialogBoxComponent } from './main/admin/delete-dialog-box/delete-dialog-box.component';
-import { AcceptRequestDialogBoxComponent } from './main/admin/request-dialog-boxs/accept-dialog/accept-request-dialog-box.component';
-import { RejectRequestDialogBoxComponent } from './main/admin/request-dialog-boxs/reject-dialog/reject-request-dialog-box.component';
+import { AcceptRequestDialogBoxComponent } from './main/admin/review-requests/request-dialog-boxs/accept-dialog/accept-request-dialog-box.component';
+import { RejectRequestDialogBoxComponent } from './main/admin/review-requests/request-dialog-boxs/reject-dialog/reject-request-dialog-box.component';
 @NgModule({
   declarations: [
     AppComponent,
