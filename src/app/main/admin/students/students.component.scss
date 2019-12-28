@@ -6,21 +6,23 @@ th{
     width: 100%;
 }
 
-@media screen AND (max-width: 550px){
+
+@media screen AND (max-width: 1220px){
     #table{
-        width: 650px !important;
+        width: 1320px !important;
     }
     #paginator{
-        width: 650px !important;
+        width: 1320px !important;
     }
 }
 
-@media screen AND (max-width: 425px){
+@media screen AND (max-width: 1024px){
     #table{
-        width: 525px !important;
+        width: 1124px !important;
     }
     #paginator{
-        width: 525px !important;
+        width: 1124px !important;
     }
 }
+
 
