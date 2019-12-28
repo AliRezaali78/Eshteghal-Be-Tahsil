@@ -184,9 +184,9 @@ export class StudentsComponent implements OnInit, OnDestroy {
     });
     this.dialogSub = dialogRef.afterClosed().subscribe(response => {
       this.dialogSub.unsubscribe();
-      if (response == "no") return;
-      console.log('yes', studentCode);
-    })
+      if (response == "yes")
+        console.log('yes', studentCode);
+    });
   }
 
 
