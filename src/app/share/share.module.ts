@@ -10,11 +10,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 import { PersianDatePipe } from './pipes/persian-date.pipe';
 import { PersianNumberPipe } from './pipes/persian-number.pipe';
+import { PersianDatepickerComponent } from './components/persian-datepicker/persian-datepicker.component';
+import { InputFileComponent } from './components/input-file/input-file.component';
+import { TableSpinnerComponent } from './components/table-spinner/table-spinner.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { B4SpinnerComponent } from './components/b4-spinner/b4-spinner.component';
 
 @NgModule({
     declarations: [
         PersianDatePipe,
         PersianNumberPipe,
+        PersianDatepickerComponent,
+        InputFileComponent,
+        TableSpinnerComponent,
+        NotFoundComponent,
+        B4SpinnerComponent
     ],
     imports: [
         BrowserModule,
@@ -34,8 +44,11 @@ import { PersianNumberPipe } from './pipes/persian-number.pipe';
         ToastrModule.forRoot(),
     ],
     exports: [
-        PersianDatePipe,
-        PersianNumberPipe,
+        PersianDatepickerComponent,
+        InputFileComponent,
+        TableSpinnerComponent,
+        NotFoundComponent,
+        B4SpinnerComponent,
 
         BrowserModule,
         BrowserAnimationsModule,
@@ -46,6 +59,8 @@ import { PersianNumberPipe } from './pipes/persian-number.pipe';
         RecaptchaFormsModule,
         RecaptchaModule,
         HttpClientModule,
+        PersianDatePipe,
+        PersianNumberPipe,
     ],
     providers: [
         // { provide: ErrorHandler, useClass: AppErrorHandler },

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { MatProgressBar } from '@angular/material';
-import { FileChangedEventArgs } from 'src/app/input-file/input-file.component';
+import { FileChangedEventArgs } from 'src/app/share/components/input-file/input-file.component';
 
 @Component({
   selector: 'change-profile-img',

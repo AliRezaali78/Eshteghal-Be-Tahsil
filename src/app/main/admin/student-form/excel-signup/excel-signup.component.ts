@@ -3,7 +3,7 @@ import { ExcelService } from './../../../../services/excel.service';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { User } from 'src/app/models/user.model';
-import { FileChangedEventArgs } from 'src/app/input-file/input-file.component';
+import { FileChangedEventArgs } from 'src/app/share/components/input-file/input-file.component';
 
 @Component({
   selector: 'excel-signup',
