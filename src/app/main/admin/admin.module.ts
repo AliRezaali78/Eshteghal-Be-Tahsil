@@ -11,6 +11,8 @@ import { StudentFormComponent } from './student-form/student-form.component';
 import { ExcelSignupComponent } from './student-form/excel-signup/excel-signup.component';
 import { ManualSignupComponent } from './student-form/manual-signup/manual-signup.component';
 import { StudentsComponent } from './students/students.component';
+import { AdminRoutingModule } from './admin.routing';
+import { ExcelTableComponent } from './student-form/excel-signup/excel-table/excel-table.component';
 
 @NgModule({
     declarations: [
@@ -22,9 +24,13 @@ import { StudentsComponent } from './students/students.component';
         SignupRequestsComponent,
         StudentFormComponent,
         ExcelSignupComponent,
+        ExcelTableComponent,
         ManualSignupComponent,
-        StudentsComponent
+        StudentsComponent,
     ],
-    imports: [ShareModule],
+    imports: [
+        ShareModule,
+        AdminRoutingModule
+    ],
 })
 export class AdminModule { }

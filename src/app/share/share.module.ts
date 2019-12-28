@@ -3,10 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { JwtModule } from '@auth0/angular-jwt';
 import { RECAPTCHA_LANGUAGE, RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 import { CustomFormsModule } from 'ng2-validation';
-import { ToastrModule } from 'ngx-toastr';
 
 import { B4SpinnerComponent } from './components/b4-spinner/b4-spinner.component';
 import { InputFileComponent } from './components/input-file/input-file.component';
@@ -39,12 +37,6 @@ import { MaterialsModule } from './modules/materials.module';
         RecaptchaModule,
         HttpClientModule,
         MaterialsModule,
-        JwtModule.forRoot({
-            config: {
-                tokenGetter: tokenGetter
-            }
-        }),
-        ToastrModule.forRoot(),
     ],
     exports: [
         PersianDatepickerComponent,
@@ -75,6 +67,3 @@ import { MaterialsModule } from './modules/materials.module';
 })
 export class ShareModule { }
 
-export function tokenGetter() {
-    return localStorage.getItem('token');
-}
