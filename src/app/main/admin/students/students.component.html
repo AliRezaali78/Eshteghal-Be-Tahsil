@@ -60,6 +60,9 @@
             <ng-container matColumnDef="actions">
                 <th mat-header-cell *matHeaderCellDef> </th>
                 <td class="text-left" mat-cell *matCellDef="let row">
+                    <button mat-icon-button routerLink="/review-requests" [queryParams]="{studentCode:row.studentCode}">
+                        <i class="fad fa-table"></i>
+                    </button>
                     <button mat-icon-button [routerLink]="['../student-form',row.studentCode]">
                         <i class="fad fa-pen"></i>
                     </button>
