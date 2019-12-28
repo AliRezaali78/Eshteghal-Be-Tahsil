@@ -1,8 +1,8 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { NationalCodeValidators } from 'src/app/common/validators/national-code.validators';
-import { NumberValidators } from 'src/app/common/validators/number.validators';
+import { NationalCodeValidators } from 'src/app/share/validators/national-code.validators';
+import { NumberValidators } from 'src/app/share/validators/number.validators';
 import { MajorsService } from 'src/app/services/majors.service';
 import { User } from 'src/app/models/user.model';
 

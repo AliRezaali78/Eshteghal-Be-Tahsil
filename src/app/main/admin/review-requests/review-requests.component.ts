@@ -1,4 +1,4 @@
-import { fadeIn } from './../../../common/animations/fade.animation';
+import { fadeIn } from '../../../share/animations/fade.animation';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';

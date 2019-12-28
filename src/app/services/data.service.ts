@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { AppError } from 'src/app/common/errors/app.error';
-import { NotFound } from 'src/app/common/errors/not-found.error';
-import { BadRequest } from 'src/app/common/errors/bad-request.error';
-import { NotAuthorized } from '../common/errors/not-authorized.error';
+import { AppError } from 'src/app/share/errors/app.error';
+import { NotFound } from 'src/app/share/errors/not-found.error';
+import { BadRequest } from 'src/app/share/errors/bad-request.error';
+import { NotAuthorized } from '../share/errors/not-authorized.error';
 
 export class DataService {
 

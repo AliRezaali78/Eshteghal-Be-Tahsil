@@ -1,4 +1,4 @@
-import { PersianNumberService } from './../../services/persian-services/persian-number.service';
+import { PersianNumberService } from '../../services/persian-services/persian-number.service';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'persianNumber' })

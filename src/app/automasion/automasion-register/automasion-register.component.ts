@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NationalCodeValidators } from 'src/app/common/validators/national-code.validators';
-import { NumberValidators } from 'src/app/common/validators/number.validators';
+import { NationalCodeValidators } from 'src/app/share/validators/national-code.validators';
+import { NumberValidators } from 'src/app/share/validators/number.validators';
 
-import { fadeInOutCustom } from './../../common/animations/fade.animation';
+import { fadeInOutCustom } from '../../share/animations/fade.animation';
 import { MajorsService } from 'src/app/services/majors.service';
 
 @Component({

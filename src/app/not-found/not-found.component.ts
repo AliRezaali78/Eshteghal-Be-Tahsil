@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fadeIn } from '../common/animations/fade.animation';
+import { fadeIn } from '../share/animations/fade.animation';
 import { Title } from '@angular/platform-browser';
 
 @Component({

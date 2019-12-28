@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, map } from 'rxjs/operators';
-import { BadRequest } from 'src/app/common/errors/bad-request.error';
+import { BadRequest } from 'src/app/share/errors/bad-request.error';
 import { JwtHelperService } from '@auth0/angular-jwt';
 @Injectable({
   providedIn: 'root'

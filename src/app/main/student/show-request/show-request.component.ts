@@ -1,4 +1,4 @@
-import { fadeIn } from './../../../common/animations/fade.animation';
+import { fadeIn } from '../../../share/animations/fade.animation';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

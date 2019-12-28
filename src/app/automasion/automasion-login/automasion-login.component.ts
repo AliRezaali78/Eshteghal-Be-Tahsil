@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AppError } from 'src/app/common/errors/app.error';
-import { BadRequest } from 'src/app/common/errors/bad-request.error';
+import { AppError } from 'src/app/share/errors/app.error';
+import { BadRequest } from 'src/app/share/errors/bad-request.error';
 
 @Component({
   selector: 'automasion-login',

@@ -1,4 +1,4 @@
-import { fadeIn } from '../../common/animations/fade.animation';
+import { fadeIn } from '../../share/animations/fade.animation';
 import { Component, OnInit, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 import { SidenavService } from '../../services/sidenav/sidenav.service';

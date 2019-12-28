@@ -14,8 +14,8 @@ import { AutomasionLoginComponent } from './automasion/automasion-login/automasi
 import { AutomasionRegisterComponent } from './automasion/automasion-register/automasion-register.component';
 import { AutomasionComponent } from './automasion/automasion.component';
 import { B4SpinnerComponent } from './b4-spinner/b4-spinner.component';
-import { PersianDatePipe } from './common/pipes/persian-date.pipe';
-import { PersianNumberPipe } from './common/pipes/persian-number.pipe';
+import { PersianDatePipe } from './share/pipes/persian-date.pipe';
+import { PersianNumberPipe } from './share/pipes/persian-number.pipe';
 import { MainNavComponent } from './main/main-nav/main-nav.component';
 import { MainComponent } from './main/main.component';
 import { ChangePasswordComponent } from './main/profile/change-password/change-password.component';
@@ -24,7 +24,7 @@ import { ProfileInformationComponent } from './main/profile/profile-information/
 import { ProfileComponent } from './main/profile/profile.component';
 import { NewRequestComponent } from './main/student/new-request/new-request.component';
 import { RequestsComponent } from './main/student/requests/requests.component';
-import { MaterialsModule } from './common/modules/materials.module';
+import { MaterialsModule } from './share/modules/materials.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthInterceptor } from './services/auth.interceptor.service';
 import { PersianNumberService } from './services/persian-services/persian-number.service';
@@ -44,6 +44,7 @@ import { AcceptRequestDialogBoxComponent } from './main/admin/review-requests/re
 import { RejectRequestDialogBoxComponent } from './main/admin/review-requests/request-dialog-boxs/reject-dialog/reject-request-dialog-box.component';
 import { PersianDatepickerComponent } from './persian-datepicker/persian-datepicker.component';
 import { ShowReviewRequestComponent } from './main/admin/review-requests/show-review-request/show-review-request.component';
+import { ShareModule } from './share/share.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,8 +61,7 @@ import { ShowReviewRequestComponent } from './main/admin/review-requests/show-re
     ProfileInformationComponent,
     B4SpinnerComponent,
     ChangeProfileImgComponent,
-    PersianDatePipe,
-    PersianNumberPipe,
+
     ShowRequestComponent,
     TableSpinnerComponent,
     StudentFormComponent,
@@ -80,25 +80,11 @@ import { ShowReviewRequestComponent } from './main/admin/review-requests/show-re
     ShowReviewRequestComponent
   ],
   imports: [
-    BrowserModule,
+    ShareModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CustomFormsModule,
-    RecaptchaFormsModule, RecaptchaModule,
-    HttpClientModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter
-      }
-    }),
-    ToastrModule.forRoot(),
   ],
   providers: [
     PersianNumberService,
-    // { provide: ErrorHandler, useClass: AppErrorHandler },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: RECAPTCHA_LANGUAGE, useValue: 'fa' }
   ],
@@ -111,6 +97,3 @@ import { ShowReviewRequestComponent } from './main/admin/review-requests/show-re
 })
 export class AppModule { }
 
-export function tokenGetter() {
-  return localStorage.getItem('token');
-}

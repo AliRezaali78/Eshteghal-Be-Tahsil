@@ -1,4 +1,4 @@
-import { fadeIn } from './../../../common/animations/fade.animation';
+import { fadeIn } from '../../../share/animations/fade.animation';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTabGroup } from '@angular/material/tabs';

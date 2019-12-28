@@ -1,6 +1,6 @@
 import { FormControl } from '@angular/forms';
 import { Subscription, merge } from 'rxjs';
-import { fadeIn } from './../../../common/animations/fade.animation';
+import { fadeIn } from '../../../share/animations/fade.animation';
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { MatPaginator } from '@angular/material/paginator';
