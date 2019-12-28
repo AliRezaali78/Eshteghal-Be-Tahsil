@@ -1,6 +1,6 @@
-import { NavigationBarService } from './../../services/navigation-bar.service';
+import { NavigationBarService } from '../../share/services/navigation-bar.service';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth/auth.service';
+import { AuthService } from 'src/app/share/services/auth/auth.service';
 import { FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AppError } from 'src/app/share/errors/app.error';

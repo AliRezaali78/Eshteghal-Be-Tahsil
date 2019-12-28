@@ -1,4 +1,4 @@
-import { PersianNumberService } from '../../services/persian-services/persian-number.service';
+import { PersianNumberService } from '../services/persian-services/persian-number.service';
 import { AbstractControl, ValidationErrors } from '@angular/forms';
 import { Injectable } from '@angular/core';
 @Injectable()

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SidenavService } from 'src/app/services/sidenav/sidenav.service';
-import { AuthService } from 'src/app/services/auth/auth.service';
+import { SidenavService } from 'src/app/share/services/sidenav/sidenav.service';
+import { AuthService } from 'src/app/share/services/auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({

@@ -4,7 +4,7 @@ import { NationalCodeValidators } from 'src/app/share/validators/national-code.v
 import { NumberValidators } from 'src/app/share/validators/number.validators';
 
 import { fadeInOutCustom } from '../../share/animations/fade.animation';
-import { MajorsService } from 'src/app/services/majors.service';
+import { MajorsService } from 'src/app/share/services/majors.service';
 
 @Component({
   selector: 'automasion-register',

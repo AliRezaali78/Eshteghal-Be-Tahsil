@@ -5,7 +5,7 @@ import { MatTabGroup } from '@angular/material/tabs';
 import { Title } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { SidenavService } from 'src/app/services/sidenav/sidenav.service';
+import { SidenavService } from 'src/app/share/services/sidenav/sidenav.service';
 
 @Component({
   selector: 'student-form',

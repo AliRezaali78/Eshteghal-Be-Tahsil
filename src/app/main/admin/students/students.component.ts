@@ -6,7 +6,7 @@ import { Title } from '@angular/platform-browser';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { User } from 'src/app/models/user.model';
+import { User } from 'src/app/share/models/user.model';
 import { startWith, switchMap, map, tap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { MatDialog } from '@angular/material';
 import { DeleteDialogBoxComponent } from '../delete-dialog-box/delete-dialog-box.component';

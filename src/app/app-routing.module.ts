@@ -12,8 +12,8 @@ import { NewRequestComponent } from './main/student/new-request/new-request.comp
 import { RequestsComponent } from './main/student/requests/requests.component';
 import { ShowRequestComponent } from './main/student/show-request/show-request.component';
 import { NotFoundComponent } from './share/components/not-found/not-found.component';
-import { AdminGuard } from './services/guards/admin-guard.service';
-import { AuthGuard } from './services/guards/auth-guard.service';
+import { AdminGuard } from './share/services/guards/admin-guard.service';
+import { AuthGuard } from './share/services/guards/auth-guard.service';
 import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
 
 const routes: Routes = [

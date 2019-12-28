@@ -1,8 +1,8 @@
-import { NavigationBarService } from './../../../../services/navigation-bar.service';
-import { ExcelService } from './../../../../services/excel.service';
+import { NavigationBarService } from '../../../../share/services/navigation-bar.service';
+import { ExcelService } from '../../../../share/services/excel.service';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { User } from 'src/app/models/user.model';
+import { User } from 'src/app/share/models/user.model';
 import { FileChangedEventArgs } from 'src/app/share/components/input-file/input-file.component';
 
 @Component({

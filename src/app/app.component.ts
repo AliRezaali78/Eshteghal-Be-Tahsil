@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
-import { NavigationBarService } from './services/navigation-bar.service';
+import { NavigationBarService } from './share/services/navigation-bar.service';
 
 @Component({
   selector: 'app-root',

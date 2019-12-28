@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { NationalCodeValidators } from 'src/app/share/validators/national-code.validators';
 import { NumberValidators } from 'src/app/share/validators/number.validators';
-import { MajorsService } from 'src/app/services/majors.service';
-import { User } from 'src/app/models/user.model';
+import { MajorsService } from 'src/app/share/services/majors.service';
+import { User } from 'src/app/share/models/user.model';
 
 @Component({
   selector: 'manual-signup',

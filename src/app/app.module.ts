@@ -32,8 +32,8 @@ import { ProfileComponent } from './main/profile/profile.component';
 import { NewRequestComponent } from './main/student/new-request/new-request.component';
 import { RequestsComponent } from './main/student/requests/requests.component';
 import { ShowRequestComponent } from './main/student/show-request/show-request.component';
-import { AuthInterceptor } from './services/auth.interceptor.service';
-import { PersianNumberService } from './services/persian-services/persian-number.service';
+import { AuthInterceptor } from './share/services/auth.interceptor.service';
+import { PersianNumberService } from './share/services/persian-services/persian-number.service';
 import { ShareModule } from './share/share.module';
 
 @NgModule({

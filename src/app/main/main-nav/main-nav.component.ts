@@ -4,7 +4,7 @@ import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 import { Observable, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { AuthService } from 'src/app/services/auth/auth.service';
+import { AuthService } from 'src/app/share/services/auth/auth.service';
 
 @Component({
   selector: 'main-nav',
