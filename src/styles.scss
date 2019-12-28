@@ -31,3 +31,9 @@ button[mat-stroked-button]{
     border-radius: 100%;
     background-size: cover;
 }
+
+@media screen AND (max-width:767px){
+    .flex-control{
+        display: block !important;
+    }    
+}

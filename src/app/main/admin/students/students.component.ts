@@ -1,10 +1,13 @@
+import { FormControl } from '@angular/forms';
+import { Subscription, merge } from 'rxjs';
 import { fadeIn } from './../../../common/animations/fade.animation';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { User } from 'src/app/models/user.model';
+import { startWith, switchMap, map, tap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'students',
@@ -13,8 +16,10 @@ import { User } from 'src/app/models/user.model';
   animations: [fadeIn]
 
 })
-export class StudentsComponent implements OnInit {
+export class StudentsComponent implements OnInit, OnDestroy {
+  isLoading = false;
   defaultImage = "assets/images/profile-placeholder.png";
+
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   dataSource = new MatTableDataSource();
@@ -59,7 +64,80 @@ export class StudentsComponent implements OnInit {
       level: 'کاردانی',
       type: 'شبانه',
     },
+    {
+      imageUrl: '',
+      name: 'حسن',
+      lastname: 'رضایی',
+      father: 'احمد',
+      nationalCode: '999999999',
+      studentCode: '999999999',
+      major: 'نرم افزار - کامپیوتر',
+      startDate: '97-98',
+      startDateOption: 'نیمسال دوم تحصیلی',
+      level: 'کاردانی',
+      type: 'شبانه',
+    },
+    {
+      imageUrl: '',
+      name: 'حسن',
+      lastname: 'رضایی',
+      father: 'احمد',
+      nationalCode: '999999999',
+      studentCode: '999999999',
+      major: 'نرم افزار - کامپیوتر',
+      startDate: '97-98',
+      startDateOption: 'نیمسال دوم تحصیلی',
+      level: 'کاردانی',
+      type: 'شبانه',
+    },
+    {
+      imageUrl: '',
+      name: 'حسن',
+      lastname: 'رضایی',
+      father: 'احمد',
+      nationalCode: '999999999',
+      studentCode: '999999999',
+      major: 'نرم افزار - کامپیوتر',
+      startDate: '97-98',
+      startDateOption: 'نیمسال دوم تحصیلی',
+      level: 'کاردانی',
+      type: 'شبانه',
+    },
+    {
+      imageUrl: '',
+      name: 'حسن',
+      lastname: 'رضایی',
+      father: 'احمد',
+      nationalCode: '999999999',
+      studentCode: '999999999',
+      major: 'نرم افزار - کامپیوتر',
+      startDate: '97-98',
+      startDateOption: 'نیمسال دوم تحصیلی',
+      level: 'کاردانی',
+      type: 'شبانه',
+    },
+    {
+      imageUrl: '',
+      name: 'حسن',
+      lastname: 'رضایی',
+      father: 'احمد',
+      nationalCode: '999999999',
+      studentCode: '999999999',
+      major: 'نرم افزار - کامپیوتر',
+      startDate: '97-98',
+      startDateOption: 'نیمسال دوم تحصیلی',
+      level: 'کاردانی',
+      type: 'شبانه',
+    },
   ];
+
+  searchControl = new FormControl();
+  searchOption: string = "nameAndLastname";
+
+  sortSub: Subscription;
+  searchSub: Subscription;
+  mergeSub: Subscription;
+
   constructor(private titleService: Title) {
     titleService.setTitle('دانشجویان')
   }
@@ -68,6 +146,41 @@ export class StudentsComponent implements OnInit {
     this.dataSource.data = this.students;
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+
+    this.sortSub = this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+    this.searchSub = this.search();
+    this.mergeSub = this.sortAndPaging()
+
+  }
+
+
+
+  private search(): Subscription {
+    return this.searchControl.valueChanges.pipe(
+      tap(() => { this.isLoading = true; this.paginator.pageIndex = 0 }),
+      distinctUntilChanged(),
+      debounceTime(500),
+      map((value: string) => {
+        return { value: value.toLocaleLowerCase(), by: this.searchOption }
+      })
+    ).subscribe(data => {
+      this.isLoading = false;
+      console.log(data)
+    });
+  }
+
+  private sortAndPaging(): Subscription {
+    return merge(this.sort.sortChange, this.paginator.page).pipe(tap(() => this.isLoading = true)).subscribe(data => {
+      this.isLoading = false;
+      console.log(data);
+    });
+  }
+
+  ngOnDestroy() {
+    this.sortSub.unsubscribe();
+    this.searchSub.unsubscribe();
+    this.mergeSub.unsubscribe();
+
   }
 
 }
