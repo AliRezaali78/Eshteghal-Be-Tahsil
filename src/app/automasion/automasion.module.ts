@@ -13,10 +13,5 @@ import { ShareModule } from '../share/share.module';
     imports: [
         ShareModule
     ],
-    exports: [
-        AutomasionComponent,
-        AutomasionLoginComponent,
-        AutomasionRegisterComponent
-    ],
 })
 export class AutomasionModule { }
