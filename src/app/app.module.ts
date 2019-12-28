@@ -40,6 +40,7 @@ import { InputFileComponent } from './input-file/input-file.component';
 import { ExcelTableComponent } from './main/admin/student-form/excel-signup/excel-table/excel-table.component';
 import { NavbarComponent } from './main/main-nav/navbar/navbar.component';
 import { DeleteDialogBoxComponent } from './main/admin/delete-dialog-box/delete-dialog-box.component';
+import { AcceptRequestDialogBoxComponent } from './main/admin/request-dialog-boxs/accept-dialog/accept-request-dialog-box.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +70,8 @@ import { DeleteDialogBoxComponent } from './main/admin/delete-dialog-box/delete-
     InputFileComponent,
     ExcelTableComponent,
     NavbarComponent,
-    DeleteDialogBoxComponent
+    DeleteDialogBoxComponent,
+    AcceptRequestDialogBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -95,7 +97,8 @@ import { DeleteDialogBoxComponent } from './main/admin/delete-dialog-box/delete-
     { provide: RECAPTCHA_LANGUAGE, useValue: 'fa' }
   ],
   entryComponents: [
-    DeleteDialogBoxComponent
+    DeleteDialogBoxComponent,
+    AcceptRequestDialogBoxComponent
   ],
   bootstrap: [AppComponent]
 })
