@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './delete-dialog-box.component.html',
   styleUrls: ['./delete-dialog-box.component.scss']
 })
-export class DialogBoxComponent implements OnInit {
+export class DeleteDialogBoxComponent implements OnInit {
 
   constructor() { }
 

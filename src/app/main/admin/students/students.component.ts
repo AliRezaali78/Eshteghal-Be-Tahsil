@@ -9,7 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { User } from 'src/app/models/user.model';
 import { startWith, switchMap, map, tap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { MatDialog } from '@angular/material';
-import { DialogBoxComponent } from './delete-dialog-box/delete-dialog-box.component';
+import { DeleteDialogBoxComponent } from './delete-dialog-box/delete-dialog-box.component';
 
 @Component({
   selector: 'students',
@@ -180,8 +180,7 @@ export class StudentsComponent implements OnInit, OnDestroy {
   }
 
   openDeleteDialog(studentCode) {
-    const dialogRef = this.dialog.open(DialogBoxComponent, {
-    });
+    const dialogRef = this.dialog.open(DeleteDialogBoxComponent);
     this.dialogSub = dialogRef.afterClosed().subscribe(response => {
       this.dialogSub.unsubscribe();
       if (response == "yes")
