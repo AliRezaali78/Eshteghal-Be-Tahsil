@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'dialog-box',
-  templateUrl: './dialog-box.component.html',
-  styleUrls: ['./dialog-box.component.scss']
+  templateUrl: './delete-dialog-box.component.html',
+  styleUrls: ['./delete-dialog-box.component.scss']
 })
 export class DialogBoxComponent implements OnInit {
 

@@ -39,7 +39,7 @@ import { ExcelSignupComponent } from './main/admin/student-form/excel-signup/exc
 import { InputFileComponent } from './input-file/input-file.component';
 import { ExcelTableComponent } from './main/admin/student-form/excel-signup/excel-table/excel-table.component';
 import { NavbarComponent } from './main/main-nav/navbar/navbar.component';
-import { DialogBoxComponent } from './main/admin/students/dialog-box/dialog-box.component';
+import { DialogBoxComponent } from './main/admin/students/delete-dialog-box/delete-dialog-box.component';
 @NgModule({
   declarations: [
     AppComponent,
