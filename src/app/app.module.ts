@@ -70,9 +70,7 @@ import { ShareModule } from './share/share.module';
     AppRoutingModule,
   ],
   providers: [
-    PersianNumberService,
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-    { provide: RECAPTCHA_LANGUAGE, useValue: 'fa' }
+
   ],
   entryComponents: [
     DeleteDialogBoxComponent,
