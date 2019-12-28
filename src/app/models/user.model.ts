@@ -12,6 +12,7 @@ export class User {
     imageUrl?: string;
     joinDate?: string;
     admin?: boolean;
+    isActive?: boolean;
     constructor(init?: Partial<User>) {
         Object.assign(this, init);
     }

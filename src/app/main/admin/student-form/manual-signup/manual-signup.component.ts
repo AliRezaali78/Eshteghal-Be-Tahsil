@@ -40,7 +40,8 @@ export class ManualSignupComponent implements OnInit {
         major: 'الکترونیک',
         nationalCode: '0000000000',
         studentCode: '11111111111111',
-        type: 'شبانه'
+        type: 'شبانه',
+        isActive: true
       });
 
       this.form.patchValue(user);
@@ -60,6 +61,7 @@ export class ManualSignupComponent implements OnInit {
       startDateOption: ['', Validators.required],
       level: ['', Validators.required],
       type: ['', Validators.required],
+      isActive: ['']
     });
   }
 
