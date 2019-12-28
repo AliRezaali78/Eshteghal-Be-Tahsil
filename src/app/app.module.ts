@@ -18,35 +18,12 @@ import { ShareModule } from './share/share.module';
 @NgModule({
   declarations: [
     AppComponent,
-    // MainComponent,
-    // MainNavComponent,
-    // NewRequestComponent,
-    // RequestsComponent,
-    // ProfileComponent,
-    // ChangePasswordComponent,
-    // ProfileInformationComponent,
-    // ChangeProfileImgComponent,
-
-    // ShowRequestComponent,
-    // StudentFormComponent,
-    // StudentsComponent,
-    // ReviewRequestsComponent,
-    // SignupRequestsComponent,
-    // ManualSignupComponent,
-    // ExcelSignupComponent,
-    // ExcelTableComponent,
-    // NavbarComponent,
-    // DeleteDialogBoxComponent,
-    // AcceptRequestDialogBoxComponent,
-    // RejectRequestDialogBoxComponent,
-    // ShowReviewRequestComponent
   ],
   imports: [
     ShareModule,
     AutomasionModule,
     MainModule,
     AppRoutingModule,
-
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter
