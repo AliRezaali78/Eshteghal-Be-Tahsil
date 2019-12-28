@@ -39,6 +39,7 @@ import { ExcelSignupComponent } from './main/admin/student-form/excel-signup/exc
 import { InputFileComponent } from './input-file/input-file.component';
 import { ExcelTableComponent } from './main/admin/student-form/excel-signup/excel-table/excel-table.component';
 import { NavbarComponent } from './main/main-nav/navbar/navbar.component';
+import { DialogBoxComponent } from './main/admin/students/dialog-box/dialog-box.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,7 @@ import { NavbarComponent } from './main/main-nav/navbar/navbar.component';
     InputFileComponent,
     ExcelTableComponent,
     NavbarComponent,
+    DialogBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -91,6 +93,9 @@ import { NavbarComponent } from './main/main-nav/navbar/navbar.component';
     // { provide: ErrorHandler, useClass: AppErrorHandler },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: RECAPTCHA_LANGUAGE, useValue: 'fa' }
+  ],
+  entryComponents: [
+    DialogBoxComponent
   ],
   bootstrap: [AppComponent]
 })

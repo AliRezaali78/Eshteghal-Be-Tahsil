@@ -63,7 +63,7 @@
                     <button mat-icon-button [routerLink]="['../student-form',row.studentCode]">
                         <i class="fad fa-pen"></i>
                     </button>
-                    <button mat-icon-button [routerLink]="['../student-form',row.studentCode]">
+                    <button mat-icon-button (click)="openDeleteDialog(row.studentCode)">
                         <i class="fad fa-trash"></i>
                     </button>
                 </td>

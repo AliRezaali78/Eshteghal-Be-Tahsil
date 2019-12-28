@@ -8,6 +8,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { User } from 'src/app/models/user.model';
 import { startWith, switchMap, map, tap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { MatDialog } from '@angular/material';
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 
 @Component({
   selector: 'students',
@@ -137,8 +139,9 @@ export class StudentsComponent implements OnInit, OnDestroy {
   sortSub: Subscription;
   searchSub: Subscription;
   mergeSub: Subscription;
+  dialogSub: Subscription;
 
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private dialog: MatDialog) {
     titleService.setTitle('دانشجویان')
   }
 
@@ -175,6 +178,17 @@ export class StudentsComponent implements OnInit, OnDestroy {
       console.log(data);
     });
   }
+
+  openDeleteDialog(studentCode) {
+    const dialogRef = this.dialog.open(DialogBoxComponent, {
+    });
+    this.dialogSub = dialogRef.afterClosed().subscribe(response => {
+      this.dialogSub.unsubscribe();
+      if (response == "no") return;
+      console.log('yes', studentCode);
+    })
+  }
+
 
   ngOnDestroy() {
     this.sortSub.unsubscribe();
