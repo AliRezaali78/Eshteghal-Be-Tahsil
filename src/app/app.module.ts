@@ -1,12 +1,8 @@
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { RECAPTCHA_LANGUAGE } from 'ng-recaptcha';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AutomasionLoginComponent } from './automasion/automasion-login/automasion-login.component';
-import { AutomasionRegisterComponent } from './automasion/automasion-register/automasion-register.component';
-import { AutomasionComponent } from './automasion/automasion.component';
+import { AutomasionModule } from './automasion/automasion.module';
 import { DeleteDialogBoxComponent } from './main/admin/delete-dialog-box/delete-dialog-box.component';
 import {
   AcceptRequestDialogBoxComponent,
@@ -32,16 +28,11 @@ import { ProfileComponent } from './main/profile/profile.component';
 import { NewRequestComponent } from './main/student/new-request/new-request.component';
 import { RequestsComponent } from './main/student/requests/requests.component';
 import { ShowRequestComponent } from './main/student/show-request/show-request.component';
-import { AuthInterceptor } from './share/services/auth.interceptor.service';
-import { PersianNumberService } from './share/services/persian-services/persian-number.service';
 import { ShareModule } from './share/share.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AutomasionComponent,
-    AutomasionLoginComponent,
-    AutomasionRegisterComponent,
     MainComponent,
     MainNavComponent,
     NewRequestComponent,
@@ -67,6 +58,7 @@ import { ShareModule } from './share/share.module';
   ],
   imports: [
     ShareModule,
+    AutomasionModule,
     AppRoutingModule,
   ],
   providers: [
