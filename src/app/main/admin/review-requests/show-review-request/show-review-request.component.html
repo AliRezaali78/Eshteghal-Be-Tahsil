@@ -1,0 +1,39 @@
+<div @fadeIn dir="rtl">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>نمایش درخواست</mat-card-title>
+            <div style="flex: 1 1 auto"></div>
+            <button routerLink="../" mat-button style="transform: translateY(-6px);">
+                بازگشت
+                <i class="far fa-long-arrow-left"></i>
+            </button>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <mat-card-content style="font-size: 110%; line-height: 25px;" class="text-right py-3">
+                <div dir="rtl" id="option">
+                    <label class="mat-h3 font-weight-bold mb-2 ml-2">سازمان / مرکز :</label>
+                    <span>{{ request.option }}</span>
+                </div>
+                <div dir="rtl" id="to">
+                    <label class="mat-h3 font-weight-bold mb-2 ml-2">به :</label>
+                    <span>{{ request.to }}</span>
+                </div>
+                <div id="description">
+                    <label class="mat-h3 font-weight-bold mb-2"> توضیحات :</label>
+                    <p style="white-space: pre;" class="pr-1">{{ request.description }}</p>
+                </div>
+                <div *ngIf="request.status === 3" id="response">
+                    <label class="mat-h3 font-weight-bold mb-2"> علت رد شدن :</label>
+                    <p style="white-space: pre;" class="pr-1">{{ request.response }}</p>
+                </div>
+            </mat-card-content>
+        </mat-card-content>
+        <mat-card-actions>
+            <div *ngIf="request.status === 1">
+                <button mat-raised-button color="warn" (click)="reject()">رد درخواست</button>
+                <button mat-raised-button class="bg-success text-white" (click)="accept()">تایید درخواست</button>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>

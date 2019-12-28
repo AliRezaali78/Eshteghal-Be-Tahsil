@@ -2,19 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AutomasionComponent } from './automasion/automasion.component';
-import { MainComponent } from './main/main.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { AuthGuard } from './services/guards/auth-guard.service';
-import { NewRequestComponent } from './main/student/new-request/new-request.component';
-import { RequestsComponent } from './main/student/requests/requests.component';
-import { ProfileComponent } from './main/profile/profile.component';
-import { ShowRequestComponent } from './main/student/show-request/show-request.component';
-import { StudentGuard } from './services/guards/student-guard.service';
-import { AdminGuard } from './services/guards/admin-guard.service';
-import { StudentsComponent } from './main/admin/students/students.component';
-import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
+import { ShowReviewRequestComponent } from './main/admin/review-requests/show-review-request/show-review-request.component';
 import { SignupRequestsComponent } from './main/admin/signup-requests/signup-requests.component';
 import { StudentFormComponent } from './main/admin/student-form/student-form.component';
+import { StudentsComponent } from './main/admin/students/students.component';
+import { MainComponent } from './main/main.component';
+import { ProfileComponent } from './main/profile/profile.component';
+import { NewRequestComponent } from './main/student/new-request/new-request.component';
+import { RequestsComponent } from './main/student/requests/requests.component';
+import { ShowRequestComponent } from './main/student/show-request/show-request.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AdminGuard } from './services/guards/admin-guard.service';
+import { AuthGuard } from './services/guards/auth-guard.service';
+import { ReviewRequestsComponent } from './main/admin/review-requests/review-requests.component';
 
 const routes: Routes = [
   {
@@ -28,7 +28,10 @@ const routes: Routes = [
       { path: "students", component: StudentsComponent, canActivate: [AdminGuard] },
       { path: "student-form/:id", component: StudentFormComponent, canActivate: [AdminGuard] },
       { path: "student-form", component: StudentFormComponent, canActivate: [AdminGuard] },
+
+      { path: "review-requests/:id", component: ShowReviewRequestComponent, canActivate: [AdminGuard] },
       { path: "review-requests", component: ReviewRequestsComponent, canActivate: [AdminGuard] },
+
       { path: "signup-requests", component: SignupRequestsComponent, canActivate: [AdminGuard] },
 
 

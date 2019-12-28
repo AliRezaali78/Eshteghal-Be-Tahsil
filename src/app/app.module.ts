@@ -43,6 +43,7 @@ import { DeleteDialogBoxComponent } from './main/admin/delete-dialog-box/delete-
 import { AcceptRequestDialogBoxComponent } from './main/admin/review-requests/request-dialog-boxs/accept-dialog/accept-request-dialog-box.component';
 import { RejectRequestDialogBoxComponent } from './main/admin/review-requests/request-dialog-boxs/reject-dialog/reject-request-dialog-box.component';
 import { PersianDatepickerComponent } from './persian-datepicker/persian-datepicker.component';
+import { ShowReviewRequestComponent } from './main/admin/review-requests/show-review-request/show-review-request.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +76,8 @@ import { PersianDatepickerComponent } from './persian-datepicker/persian-datepic
     DeleteDialogBoxComponent,
     AcceptRequestDialogBoxComponent,
     RejectRequestDialogBoxComponent,
-    PersianDatepickerComponent
+    PersianDatepickerComponent,
+    ShowReviewRequestComponent
   ],
   imports: [
     BrowserModule,
