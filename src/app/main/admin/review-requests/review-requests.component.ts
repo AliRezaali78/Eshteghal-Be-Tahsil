@@ -1,3 +1,4 @@
+import { fadeIn } from './../../../common/animations/fade.animation';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
@@ -10,7 +11,8 @@ import { debounceTime, distinctUntilChanged, map, tap } from 'rxjs/operators';
 @Component({
   selector: 'review-requests',
   templateUrl: './review-requests.component.html',
-  styleUrls: ['./review-requests.component.scss']
+  styleUrls: ['./review-requests.component.scss'],
+  animations: [fadeIn]
 })
 export class ReviewRequestsComponent implements OnInit {
   isLoading = false;
@@ -65,6 +67,9 @@ export class ReviewRequestsComponent implements OnInit {
   searchControl = new FormControl();
   searchOption: string = "nameAndLastname";
 
+  fromDateControl = new FormControl();
+  tillDateControl = new FormControl();
+
   sortSub: Subscription;
   searchSub: Subscription;
   mergeSub: Subscription;
@@ -83,6 +88,10 @@ export class ReviewRequestsComponent implements OnInit {
     this.searchSub = this.search();
     this.mergeSub = this.sortAndPaging()
 
+  }
+
+  public dateFilter() {
+    console.log(JSON.stringify(this.fromDateControl.value), JSON.stringify(this.tillDateControl.value))
   }
 
   private search(): Subscription {

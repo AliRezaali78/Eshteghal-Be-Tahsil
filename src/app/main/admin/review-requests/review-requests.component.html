@@ -1,5 +1,5 @@
 <div @fadeIn>
-    <div dir="rtl" class="d-flex flex-control">
+    <div dir="rtl" class="d-flex flex-control mb-3">
         <mat-form-field class="text-right col-md-6 p-0">
             <input matInput [formControl]="searchControl" placeholder="جست و جو">
         </mat-form-field>
@@ -11,7 +11,19 @@
             </mat-select>
         </mat-form-field>
     </div>
-
+    <div dir="rtl" class="d-flex flex-control mb-3 ">
+        <div class="col-md-5 p-0">
+            <mat-persian-datepicker [control]="fromDateControl" name="fromDate" label="از تاریخ">
+            </mat-persian-datepicker>
+        </div>
+        <div class="col-md-5 p-0">
+            <mat-persian-datepicker [control]="tillDateControl" name="tillDate" label="تا تاریخ">
+            </mat-persian-datepicker>
+        </div>
+        <button (click)="dateFilter()" color="primary" class="col-2" style="height: 40px;" mat-stroked-button>فیلتر
+            تاریخ
+        </button>
+    </div>
     <div class="w-100 table-responsive mat-elevation-z1" style="position: relative;">
         <table-spinner [isLoading]="isLoading"></table-spinner>
         <table id="table" dir="rtl" mat-table [dataSource]="dataSource" matSort class="table-striped text-right">
