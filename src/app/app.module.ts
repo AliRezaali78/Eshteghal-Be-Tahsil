@@ -41,6 +41,7 @@ import { ExcelTableComponent } from './main/admin/student-form/excel-signup/exce
 import { NavbarComponent } from './main/main-nav/navbar/navbar.component';
 import { DeleteDialogBoxComponent } from './main/admin/delete-dialog-box/delete-dialog-box.component';
 import { AcceptRequestDialogBoxComponent } from './main/admin/request-dialog-boxs/accept-dialog/accept-request-dialog-box.component';
+import { RejectRequestDialogBoxComponent } from './main/admin/request-dialog-boxs/reject-dialog/reject-request-dialog-box.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +72,8 @@ import { AcceptRequestDialogBoxComponent } from './main/admin/request-dialog-box
     ExcelTableComponent,
     NavbarComponent,
     DeleteDialogBoxComponent,
-    AcceptRequestDialogBoxComponent
+    AcceptRequestDialogBoxComponent,
+    RejectRequestDialogBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +100,8 @@ import { AcceptRequestDialogBoxComponent } from './main/admin/request-dialog-box
   ],
   entryComponents: [
     DeleteDialogBoxComponent,
-    AcceptRequestDialogBoxComponent
+    AcceptRequestDialogBoxComponent,
+    RejectRequestDialogBoxComponent
   ],
   bootstrap: [AppComponent]
 })
